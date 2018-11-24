@@ -1,0 +1,56 @@
+.welcome {
+    text-align: center;
+    padding: 7px;
+    font-size: 20px; 
+}
+body {
+    margin: 0px;
+}
+#column-l {
+    float: left;
+    width: 150px;
+    height: 400px;
+    border-color: black;
+    border-width: 2px; 
+    border-style: solid;
+    padding-top: 15px;
+}
+
+#column-r {
+    height: 415px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin-left: 160px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: lightgrey
+}
+
+th {
+    background-color: grey;
+}
+
+td {
+    padding: 8px;
+}
+
+.menu {
+    text-align: center;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+

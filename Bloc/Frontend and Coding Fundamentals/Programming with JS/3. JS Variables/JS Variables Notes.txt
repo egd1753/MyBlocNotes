@@ -1,0 +1,90 @@
+JS Variables Notes
+
+
+Vocab.
+= sign is called the "assignment operator"
+
+initializing means assigning a starting value when something is first declared. If a variable isn't initialized, it's undefined.
+
+"calling" a function means typing the identifier (name) of the function surrounded by () so that we can execute it. 
+
+argument- any additional info in () when calling a function
+
+
+
+
+Variable is a named location that stores a value. Devs use them to store, retrieve, and manipulate values in our code. ***A variable in JS is basically just like a variable in algebra***
+
+JS has 7 different data types for variable values, 6 of these are primitive types: undefined, null, boolean, string, number, and symbol. A primitive value is one that is immutable/unable to change. The 7th data type is object, and is mutable. A variable can store any value of these data types.
+
+
+
+Declaration/Initialization
+	We instantiate (create) variables using this syntax: var variableName = value;	`var` is a keyword that tells the computer this is a new variable. 	`variableName` tells computer the name by which to reference the value. = is the assignment operator that tells computer to store data in variable. `value` is whatever data we want to store in the variable. In JS, a ; denotes the end of a line of code. Note: don't have to initialize the variable with a specific value (initializing a variable is assigning it a starting value when you first declare the variable. If you do not initialize a variable, it will have a value of undefined).
+
+
+Variable Naming (Identifiers)
+Variables should be names something that gives clues to the data they hold. JS uses naming convention called camelCase. In camelCase, we write variable names in lowercase except for first letter of each successive word, Ex.: averageMilesPerGallon. 
+Rules: 
+1. always use nouns 
+2. be specific, but not so specific that it's confusing 
+3. variables should never include abbreviated words 
+4. never name variables by type (ex.: call it "points", not "number").
+5. they can contain letters, digits, underscores, and dollar signs
+6. must begin with a letter, (although can also begin with $ and _)
+7. remember that names are case sensitive (exampleName isn't the same as examplename)
+8. Can't use a dash, otherwise the parser will interpret it as the subract operator
+
+
+
+Scope
+Scope is where in the program variable can be accessed (local vs. global).  
+
+
+Function
+A chunk of code that can be written once, saved, then executed repeatedly. 
+	Ex.: creating program to greet Walmart shoppers, instead of writing: 
+console.log('Hello Bob');
+console.log('Hello Sally'); etc., we can write:
+
+function greet(name) {
+	console.log('Hello' + name);
+}
+Function won't do anything by itself, but to execute/call a function, we type function name with () after it. The () are used to pass additional info function requires (this info is called an argument)
+
+To create a local variable, declare it inside a function. 
+
+
+
+Declaring Variables with `const` and `let`
+	In the examples above, we used var to declare our variables; however, in ES6, we can also declare variables with const and let.
+
+	`const`
+We use const to declare a variable that we won't reassign a new value to. 
+
+	`let`
+Like var, when we see let used in a program we know we can reassign a different value to the variable later. However, while a variable defined inside of a function with  var is scoped to the entire function no matter where in the function it is defined,  let allows us to scope a variable to a particular block of code enclosed by a set of curly brackets {}. We typically choose to use let when declaring the iterator in a loop, variables in a conditional, or when writing mathematical programs.
+
+
+
+
+
+
+
+
+
+
+Extra Notes:
+
+-A variable is a placeholder. 
+
+-We need to end every statement in JS with ;
+
+-Why bother making variables? When writing a program, you prolly will have to use the content of a given variable many times, so creating a variable can save the time of having to type the whole the again every time we want to reference that info. Prolly also easier to edit later if we need to. 
+
+-If creating variable that contains a string (not number(s)), remember to use quotations or it won't run. 
+
+-var uses something called "function scope" and "hoisting", let uses "block scope". Hoisting is an unseen interpretion the computer does when it runs the code? Hoisting happens behind the scene and lets variables be available to a broader scope beyond just the area that they're declared, and this can make code prone to error. Using let is a solution to this.
+	Let has "block scope", meaning a particular variable that was declared using "let" is only available to the block of code within our {}. We sometimes want variables to have a global scope like when we use var, but it's best to smallest scope possible (unless specifically need a more global scope). This helps keep our code more organized and less prone to error.     
+
+-only need to define a variable one time

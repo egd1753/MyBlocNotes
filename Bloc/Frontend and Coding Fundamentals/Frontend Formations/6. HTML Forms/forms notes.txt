@@ -1,0 +1,60 @@
+<form> element
+
+
+
+-password displayed as bullet points? There's a way to set that 
+
+-we use the "post" form of submitting 
+
+-this:   <input type="text" />    will create a box to enter text in. If I start typing before that and leave a colon, so that it could read `Username:<input type="text" />`, it will put the text before the colon as text before the text box.
+
+-when building the text box for the password, it's best to use <input type="password" /> and not the type="text"  attribute
+
+
+
+
+<form> tag has elements:
+input - where users typically interact with a form. 
+textarea - defines multi-line text input control
+button - defines a clickable button, can hold text AND/OR images
+select - creates a drop-down list
+option - goes inside <select> or <datalist>, defines list option
+optgroup - groups related options in drop-down list
+fieldset - groups related elements in a form, draws a box around
+label - defines a label for an <input>, helps with usability
+
+
+<input>
+	What a user typically interacts with in a form. This is a self-closing tag, and only contains attributes for itself. We use the <label> element to define labels for each <input> element. Inputs have lots of attributes, but here are some more common ones: 
+name
+required
+type - used pretty frequently. 
+
+The type="" attribute has many values, including:
+button - defines clickable button (mostly used w/ a JS)
+checkbox - 
+color - 
+date - 
+datetime-local -
+email - 
+file - 
+hidden - 
+image - 
+month - 
+number - 
+password - 
+radio - 
+range - 
+reset - 
+search - 
+submit - 
+tel - 
+text - 
+time - 
+url - 
+week - 
+
+
+
+Extra Notes:
+-<label> element uses for="" attribute with a value equal to the id attribute of the related <input> to correctly reference/label it, and the inner text is the label we want to use (this label will be visible). 

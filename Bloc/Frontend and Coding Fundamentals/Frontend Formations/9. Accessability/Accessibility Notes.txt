@@ -1,0 +1,30 @@
+Accessibility
+
+
+What is it?
+	According to Usability.gov, when you make your website accessible, you are ensuring that all of your potential users, including people with disabilities, have good user experiences and can easily access your information. Search engine spiders/bots (like the one's Google, Bing, and Yahoo use to read your site) rely heavily on the accessibility features of your site to determine the nature and relevance of your content so poor accessibility will hurt your search engine rankings. No one wants to be on page 329 of a Google search! Screen readers (like macOS's VoiceOver or Windows' JAWS) are typically thought to be tools only for users with visual impairments, but many people use screen reading technology every day without realizing it: Siri, Google Assistant, and Amazon Alexa incorporate screen reading features. Many people use them to perform web searches and read emails, and those are forms of screen reading.
+
+What is an inaccessible site?
+	 When they only take non-disabled users into account, and when they deviate from the standards set forth by the WC3. Some practices include: Excessive use of non-semantic HTML tags, or improper use of semantic HTML tags; Low contrast between text and its background; <img> tags that are relevant to the content but have no alt attribute; Auto-playing audio or video; UI components that require users to use fine motor skills to accomplish tasks.
+
+What is Semantic HTML?
+	The use of HTML tags to convey the meaning, or purpose, of the content contained within the tag. In other words, HTML tags come in two groups: Tags that describe the type of information that's inside of them, and tags that don't. Examples of semantic elements are: <form>, <table>, and <article>. Examples of non-semantic elements are: <div> and <span>. You can put almost any type of content inside of a <div> or <span> tag, but a  <table> tag, for example, should contain only tabular data. The <table> tag suggests the nature of the content it contains. A site that starts and ends with a <table> tag is an example of a non-semantic site. Check out this example of a non-semantic site. It's almost impossible to create a 100% semantic site, but try to use the most descriptive tags for the content (it improves the user experience for screen readers, and makes source code more readable to future devs). Good vs. bad accessibility: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
+
+Making Sites Accessibile:
+	-Use tables for tabular data, not for layouts!
+-Whenever possible, use tags that describe the content that exists inside the tag. Remember that HTML5 has given us a wealth of more descriptive tags. Be semantic!
+-Use <label> tags in your forms. Properly connect them to their corresponding input fields.
+-Understand that about 8% of the population struggle with red-green color deficiency and other kinds of colorblindness. Use strongly contrasting colors and ensure that all notification or error text is large, bold, and easy to read.
+-Avoid creating nested drop-downs that require fine motor skills to operate. 
+For more techniques visit https://webaim.org/
+
+
+Tags: 
+	Use descriptive/semantic tags
+<main> 
+	Used to describe the main content of the page, would be nested in the <body>. 
+<article>
+	Probably want to put this within the <main> and use for the text areas. Will probably have child elements like <h3>, <p>, etc. Also, refer to https://www.w3schools.com/html/html5_semantic_elements.asp
+
+
+

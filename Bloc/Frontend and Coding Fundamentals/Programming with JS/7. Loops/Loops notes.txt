@@ -1,0 +1,136 @@
+-Loops are iterative structures (aka: we can run the same code multiple times). Can decide up-front how many times to run, or on the fly. Can do something to each item in list, or something for certain amount of time. Loops are extremely common in programming. In JS, the two most common are "for", and "while"
+
+
+Voc.
+decrement-a negative change in value (contrasted with increment)
+
+
+
+"For" Loops
+
+syntax:	for () {}
+
+If want to count out numbers 1-10, could write:
+console.log(1);
+console.log(2);
+console.log(3);...etc.
+This works, but is complicated the longer it gets. Instead of that, we can do:
+for (let i = 1; i <= 10; i++) {
+	console.log(i);
+}
+If we make one small change by switching the "10" for a "1000", we can make it count to 1000.
+
+The syntax `for () {}` has 3 parts: "for" key, the setup, the code block. The "for" will always be the same for "for" loops, the setup and block can change.
+
+Setup ()    (initialization ; condition ; final-expression)		
+	We use initialization to set the initial condition of the "for" loop. In our example, this was:   let i = 1;	
+	Next is condition. Unlike the initialization, JS checks condition before each iteration. If condition evaluates as "true", loop will continue to run, if false, it will stop. 
+	Final-expression runs after each iteration. It's job is to change condition so that loop eventually stops. In the example, we increment the "i" variable with "i++" (Note: i++ is common shortform for incrementing a number by 1. It's the same as i = i + 1   or i +=1  Its inverse is i--, and can be used to decrement a number by 1). Final-expression is very important, cause it ensures we don't write an infinite loop, which can freeze/crash a computer. 
+
+Going through previous example again step by step:
+for (let i = 1; i <= 10; i++) {
+	console.log(i);
+}
+1. i initializes to the value of 1.
+2. The condition is checked: i (1) is indeed less than or equal to 10.
+3. console.log(i); runs, printing out 1.
+4. The final-expression runs, incrementing i to 2.
+5. The condition is checked: i (2) is indeed less than or equal to 10.
+6. console.log(i); runs, printing out 2.
+7. The final-expression runs, incrementing i to 3.
+8. The condition is checked: i (3) is indeed less than or equal to 10.
+9. console.log(i); runs, printing out 3.
+10. The final-expression runs, incrementing i to 4.
+11. The condition is checked: i (4) is indeed less than or equal to 10.
+12. console.log(i); runs, printing out 4.
+13. The final-expression runs, incrementing i to 5.
+14. The condition is checked: i (5) is indeed less than or equal to 10.
+15. console.log(i); runs, printing out 5.
+16. The final-expression runs, incrementing i to 6.
+17. The condition is checked: i (6) is indeed less than or equal to 10.
+18. console.log(i); runs, printing out 6.
+19. The final-expression runs, incrementing i to 7.
+20. The condition is checked: i (7) is indeed less than or equal to 10.
+21. console.log(i); runs, printing out 7.
+22. The final-expression runs, incrementing i to 8.
+23. The condition is checked: i (8) is indeed less than or equal to 10.
+24. console.log(i); is run, printing out 8.
+25. The final-expression runs, incrementing i to 9.
+26. The condition is checked: i (9) is indeed less than or equal to 10.
+27. console.log(i); runs, printing out 9.
+28. The final-expression runs, incrementing i to 10
+29. The condition is checked: i (10) is indeed less than or equal to 10.
+30. console.log(i); runs, printing out 10.
+31. The final-expression runs, incrementing i to 11.
+32. The condition is checked: i (11) is NOT less than or equal to 10
+33. The loop exits.   
+
+Avoiding infinite loops
+	If we just changed our condition in the previous example to "i >=1", it creates an infinite loop. At first "i" will be equal to 1, then with each increment, "i" will always be greater than one, so the loop never stops. Always check the setup for infinite loops.
+
+
+
+Using "for" Loop to Iterate Over an Array
+	"for" loops can iterate over or "through" an array.
+Ex.: let clothes = {'hat', 'shirt', 'pants', 'shoes'];
+     for (let i = 0; i < clothes.length; i++) {
+	  console.log(clothes[i]);
+     }
+
+We first define our array, then set up for the loop to console.log() each item in array. Differences/Notes: 
+1. arrays are indexed from 0, so i needs to be initialized to 0 instead of 1 
+2. for condition, check that i is less than the length of the array. This works cause last index of array will be 1 less than the length of the array. In this case, 4 items in array at indexes 0, 1, 2, and 3
+3. final-expression is the same. We increment through the indexes of the array.
+4. Within code block, instead of using console.log() to print i, we use it to print the "ith" element of the array (clothes[i])
+NOTE: When we want to access an item in an array, we use an index. Ex.: 
+let array = ['thing', 'thinga', 'thingamajigger'];
+console.log[0]; will return thing, change it to [1] prints thinga, etc. Same logic needs to apply for loops
+
+Iterating over arrays is very common. Both map() and "for" allow you to iterate over an array. 
+
+"for" loops great for when you know how many times to run a loop, but not always the case. 
+
+
+
+
+"while" Loops
+
+syntax:  while () {}	
+
+	This loop will run as long as certain conditions evaluate to "true". Has "while" keyword, the condition, and the code block. "while" keyword never changes. The condition is different from "for" loop: it doesn't need 3 separate instructions, but only the condition within ().
+Ex.: while (libraryBook.isOverdue) {
+	addDailyCharge();
+     }
+
+Let's say we have "libraryBook" object that has boolean property "isOverdue". When book is overdue, we set "isOverdue" to "true", and some other code runs the "while" loop. Inside the loop, addDailyCharge() increments amount owed each day. When patron returns book, the "isOverdue" property is set back to false and loop exits.
+
+Sometimes we use "while" in place of "for". 1st example rewritten for "while":
+
+let number = 1;
+
+while (number <= 10) {
+	console.log(number);
+	number++;
+}
+Since we only have the condition given with (), we must move our initialization statement before the loop, and final-expression to end of code block inside the loop. Exact same output though. 
+
+
+
+
+
+
+Extra Notes/Recap:
+
+-"for" is best for when know how many times need to iterate, and "while" is useful when don't know how many times but need to run it under a condition.
+
+-When we are saying things like "i = 0", what does "i" stand for? "i" is just a variable that we create. We could also write "var i = 0"  or " var num = 0" ...etc. Also, remember we don't have to begin at 0, we can begin wherever we want. 
+
+-when we use the incrementer "i++", it actually stands for "i+=1", which means "add 1". We don't have to do this, we could easily change it to "i+=2" to add 2, or "i+=3" to add 3, etc.
+
+-a for loop's condition tells how long we should count, or iterate through.
+
+
+
+
+
+

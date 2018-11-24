@@ -1,0 +1,41 @@
+# Questions
+
+> What is the difference between inline, internal, and external styling? Which will you most commonly use?
+
+A: Inline is written inside an HTML tag by using the `style` attribute. Internal is defined in the head section of an HTML page by using `<style>`, and sets parameters for the entire document. External styling uses an outside style sheet to change the look of an entire website. I will most commonly use external styling. 
+
+> Why are ID selectors inhibiting?
+
+A: ID's are unique, belonging to only one element. Additionally, the styles used in the ID selector can only be used once per HTML document.
+
+> Is the `<div>` with class `altfoo` an immediate child of the `<div>` with `foo`? Why or why not?
+Referring to the HTML code from above, which element(s) will the following selector select? `.foo p{}`
+Referring to the HTML code from above, which element(s) will the following selector select? `.foo > p{}`
+Look at the HTML code below. What pseudo-class selector would you write to select the first `<p>` element? (Only the first one!)
+
+A: Yes, it is an immediate child because the `<div>` with class `altfoo` opens and closes within the `<div>` with `foo` (the `<div>` with `altfoo` is also indented accordingly).
+1. It will select all paragraphs within the `<div class="foo">` and `</div>` (this includes the paragraphs within the `<div class="altfoo">` element)
+2. It will select the first two paragraphs (in between the `<div class="foo">` and `<div class="altfoo">`)
+3. `div p:first-child{}`
+
+# Coding Practice
+
+```css
+
+h2 {
+    color: fuchsia;
+}
+
+#idselector {
+    background-color: turquoise;
+}
+
+.selectorclass {
+    opacity: .5;
+}
+
+div.selectorclass {
+    border-style: solid;
+}
+
+```

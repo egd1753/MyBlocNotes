@@ -1,0 +1,47 @@
+ES6 (ECMAScript 2015) introduced classes to JS. Class syntax didn't add a new object-oriented model to JS. Classes are mostly syntactical sugar for prototypes.
+
+Classes are special functions. We can define them using expressions or declarations.
+
+
+
+Class Declarations
+	"class" keyword + name (identifier) declares a class. Names normally are capitalized. Ex.:
+
+class Example {
+	constructor(name) {
+		this.name = name;
+	}
+}
+
+
+
+Class Expressions
+	Ex.:
+var Example = class Example {
+	constructor(name) {
+		this.name = name;
+	}
+};
+Note: name after the "class" keyword is optional, and if left out it becomes an anonymous class expression, and is local to the class's body.
+
+
+
+Constructors
+	A constructor method is a special method, called when creating/initializing a class. Can only be one constructor within the class.
+
+
+Subclassing with "extends"
+	This keyword creates a child class of a parent class. Extending the parent class gives access to variables/methods defined in parent class. (??? something about need to call "super()" inside of child class's "constructor(){}"???)
+
+
+
+
+
+Extra Notes:
+-A class is a blueprint from which individual objects are created. They provide easier way to create objects/deal with inheritance.
+
+-Constructor function- starts with the keyword "constructor", and in the () it has variables that you will pass in when creating the class. When we say something like "this.name = name;", we are saying that the class will have a property called "name"
+
+-"Super" keyword: using it, you can call functions on an object's parents.
+
+-We can think of the "extends" keyword to mean "inherit"

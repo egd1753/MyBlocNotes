@@ -1,0 +1,39 @@
+Conditional Statements
+
+If Statements
+	If tells JS to execute code in curly braces under certain conditions that are defined by () (these conditions are Boolean). When evaluated as `true`, code executes, doesn't if `false`. AKA: if the condition in in the () is true, then we will do whatever code is in between {}, if it is false, we will ignore the code in {}. Instead of using multiple if if statements, we can use if else statements.
+
+Else Statements
+	When the "if" is true, code executes, but if false, doesn't execute and normally nothings happens, unless we use `else`, in which case an alternate block of code executes. 
+	When multiple conditions that need checking, can also use `else if`. 
+
+Comparison Operators
+	Statements using comparison operators will return true or false values. 
+Equality Operator: `==` compares two values and returns "true" or "false". Note: different from assignment operator `=`. When using equality operator, JS converts string and number data types to the same Ex.: "5"==5 true. 
+
+Strict Equality Operator
+	`===` similar to equality, however Strict tests both value AND data type. When using this operator, must be sure you are comparing apples to apples. Ex.: 1===1 true, "1"===1 false
+
+Inequality Operator
+	`!=` is the opposite of the equality operator. Checks if two values are not equal and returns "true" or "false". It converts data types to same values when comparing. Ex.: 1 != 1 false, 1 != 2 true
+
+Strict Inequality Operator
+	`!==` is opposite of strict equality operator, it doesn't convert data types.
+
+Greater Than Operator
+	`>` compares two numbers. When left is greater than right, returns "true". Otherwise is "false". Will convert data types to be the same. 
+
+Less Than Operator
+	`<` compares two numbers, if left number is less than right number, returns "true". Converts data types to compare.
+
+Greater Than or Equal To Operator
+	`>=` compares numbers, if left is greater than OR equal to right, returns "true". Converts data types
+
+Less Than or Equal to Operator
+	`<=` if number on left is less than Or equal to right number, returns "true". Converts data types
+
+
+
+Combining Comparisons with Logical Operators
+	When need to test more than one thing in a condition, operator `&&` returns "true" if the operands to left and right are both true. 
+	The logical "OR" operator `||` returns "true" if either operand evaluates as true (also returns "true" if both operands are evaluated as true). 

@@ -1,0 +1,33 @@
+HTML Layout Notes
+
+
+
+Every web page is composed of sections or divided areas (<div>). When a webdev is handed a mockup of a webpage, they immediately divide page into separate sections/components. Every site is made up of tags within tags, and we can use them like bricks to build something.
+
+Tags within <body>:
+<header> 
+	Usually starts off the <body>, but can be placed as a container in most places where we want intro content, or nav links. (We can't place <header> within a <footer>, <address>, or another <header> element.) It typically contains one or more heading elements (<h1>-<h6>), a logo/icon, authorship info, etc. 
+
+<main>
+	Specifies main content of a document. It should contain content unique to the document, and not content that is repeated across documents (like sidebars, nav links, etc.)
+There is only one <main> per document, and it must not be a child of <article>, <aside>, <footer>, <header>, or <nav>.
+
+<section>
+	Represents standalone section, can define sections in a document, such as chapters, headers, footers, or any other sections of the document (try to be semantic tho).
+ 
+<aside>
+	For sidebars/content that belongs more on the side from the content it's nested in, should be related to surrounding content. 
+
+<div>
+	Defines a division/section in an HTML doc. Often used as a container for other elements (for CSS styling purposes, performing tasks in JavaScript, etc.). Note: this now needs to be used sparingly, as it can reduce the accessibility of a web page.
+
+
+<footer>
+	Defines a footer, should contain info about its containing element. Typically contains: authorship, copyright, and/or contact info, sitemap, back to top links, related documents. You can have multiple <footer> elements in one doc. (Contact info inside a <footer> should go inside an <address> tag.)
+
+
+Bonus Notes:
+<br> should be used minimally, if at all, but can be used for writing addresses or poems (not separating paragraphs). Note: this is one of the handful of HTML elements that does not have a closing tag
+
+The <h1>-<h6> tags change the size of text to emphasize. The smaller the number the bigger the text.
+

@@ -1,0 +1,31 @@
+General JS Questions
+  
+
+Git bash: type "tig" as a "super status" use "j" and "k" to navigate
+
+-----------------------------------
+> What's the difference between an API and CORS?
+A: CORS allows you to filter an API through it. It's a security feature, and keep querying until successful request. API is getting resources from somewhere. Different kinds of URLs: www.example.com, API URLs that send data back, 
+
+> How can I interact more with my classmates?
+A: Slack, there are different channels. There is a NOLA one, open-sourced, post your project, study skills, tutorials, random, welcome, tech news, collaborate. Go to local meetups for web devs. Linked-in 
+
+> What is json?
+A: A way of presenting data, exists as a way of sending data over HTTP requests (code independent, code independent). XML is another way to send info. 
+
+> Where is the proper place to insert JavaScript?
+A: Almost always use external file sheet, it's fine putting it in the head or closing body tag
+
+> Assessment: One Git question, Javascript, a few html, a few css, some coding questions
+
+product owner=face of product (salesman, team motivator, team communicator, represent product to the business, barriar between business and team). Scrum master=master of process (get done, get done efficiently, facilitate meetings). Business analyst (analyzing data, how to make improvements). 
+Epics are the big part, slices within that are things like "checkout experience", and within that are subdivisions. Other slices like "portals for book publishers"
+
+estimates: t shirt sizes, fibonacci numbers, etc. Fibonacci prolly best to use
+
+
+
+
+If I am creating a function that expects an array as an argument, can I not write "function functionName([paramArray]) {}"?
+
+What exactly does "enumerable" mean, as in enumerable function, enumerable property, etc.

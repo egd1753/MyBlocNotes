@@ -1,0 +1,30 @@
+# Questions
+
+> What are JavaScript's five main primitive data types?
+
+A: String, number, boolean, null, and undefined.
+
+> What are the only two values available to the boolean data type?
+
+A: True or false
+
+> If you create something in JavaScript but don't set a value, what data type is it given?
+
+A: It is given a data type of "Undefined". 
+
+> If you wanted to convert a number to a string, how would you do that in JavaScript?
+
+A: I could use the `toString() method, which will basically return whatever number is placed in () and add quotation marks at the beginning and end of the string. 
+
+> What built-in method would you use to determine the length of a given string?
+
+A: We could use the .length property.
+
+
+#Code Practice
+
+```JavaScript
+
+'Ethan Dugas'.charAt(0);
+
+```

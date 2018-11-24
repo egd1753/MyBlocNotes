@@ -1,0 +1,78 @@
+JS is a client-side scripting language, meaning the user can see the code (as opposed to a server side language)
+
+JS is an interpreted programming languange, which means each line of code is translated one-by-one as the script is run
+
+Javascript is placed within an HTML file, can use the <script> open/close tags
+
+Inside the <script> tags, we could write document.write("Hello, World!");	and this would create a statement.
+
+Variables
+	item of data that has a name and a value. We can create one with var, and then name it like: var myVariable we could end it with a ; , and this would create a variable declaration. In JS, contrasted with some other languages, we don't need to define a "type" for each variable. If we just left "var myVariable;", the value would be undefined. To define it, type an = and put the number or string that it's equal to (could also be a boolan value). 
+
+Can comment on code with a //
+
+
+Operators 
+	Let us manipulate our variables. Can use document.write() to display numbers/strings to browser
+
+Binary operators (need two operands)
+-Concatenation- uses the + sign to add stuff together
+-You can also use - to subtract
+-Can multiply with *
+-Can divide with /
+-Can find remainder after division with %
+
+Unary operators
+-Can use ++ to increment a variable by adding 1 (if we wrote var total = num1++  it will print only the value of num1. If, however, we wrote something like console.log(num1), it will increment the value of num1 by adding 1. If we want to do the incrementing before the evaluation, we put ++ before the variable, like so: var total = ++num1;)
+-Can use -- in the same way as ^, only -- decrements
+
+
+Strings
+	Stored as objects. Strings have some internal properties, even though we can't see them. One is .length
+	Strings also have methods that can be called. Difference b/w property and method: property is just a piece of info, but a method can take an input and do computation and then give an output. One method is .substring() which will take two index values and will output the portion of string lying between those positions.
+
+
+Arrays
+	Hold many values in a single variable. Useful when want to loop through lots of items and do same thing to each one. Can create them by: 
+var a = new Array(7); //declares array with 7 items
+a[0] = "cat";  //at index 0, add "cat"
+a[1] = "dog"; // at index 1, add "dog"
+etc. etc.
+This is kinda tedious to work with, so instead could write: var a = new Array("cat", "dog", etc.);	or better yet, even more concise is:
+var a = ["dog", "cat", etc.];	
+
+
+Functions
+	Very useful if have code that want to reuse. We can do it like:
+function myFunction() {//code we want to execute}
+We call the function by typing: myFunction();	
+	If we want to give functions inputs, can use parameters. Type variable names in (), (can have more than one if separated by commas), and then can use variables inside of the code block of the function:
+function myFunction(who) {
+	console.log("Hello, " + who);
+}
+Now when we call the function, we can give the variable a value. Ex.: myFunction("Bob");	
+
+
+Flow control
+	If statements only execute code if a particular condition is true. Ex.:
+var a = 7;
+if (a > 10) {//code to execute}		can also add "else" after {} if we want something else to execute if the first condition is false. 
+
+
+Loops
+	For loop, will execute a block of code multiple times. We an write for (1;2;3) {}	where 1 represents initialization phase, common to use "i" for the variable, and can initialize "i" to 0 or whatever we want. 2 stands for condition (for example: "while i is less than 5"). 3 stands for something to do after each iteration, like saying "i++", which would add 1 to each iteration if the condition is met. 
+
+
+
+
+Syntax for JS
+JS is case sensative
+
+Most things you do in JS are statements, each statement ends with a ;		this allows computer to know where one statement ends and different statement can begin
+
+We can "comment out" a block of code by putting /* before the code block and */ after. If we want a single line of comment we can just use //
+
+
+
+
+

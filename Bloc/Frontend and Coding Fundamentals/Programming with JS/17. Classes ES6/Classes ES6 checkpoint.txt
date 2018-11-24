@@ -1,0 +1,29 @@
+# Questions
+
+> What is object-oriented programming?
+
+A: It was created as an alternative to procedural programming, and it organizes information into single entities called objects. Each object is said to be an instance of a class, and the benefits of object-oriented programming is that it's easier to organize and manipulate data for larger, more dynamic jobs.
+
+> What is a constructor?
+
+A: It's a special kind of method for creating an object within a class, and helps us create "blueprints" for "object types". 
+
+> What is the purpose of the keyword `super`?
+
+A: `super` allows us to access and call functions on an object's parent. 
+
+> What are classes that do not use the keyword `extends` called?
+
+A: Parent classes
+
+# Code Practice
+
+```javascript
+
+class Shirt extends Clothes {
+	constructor(name, size, price) {
+		super(name, size, price);
+    }
+}
+
+```

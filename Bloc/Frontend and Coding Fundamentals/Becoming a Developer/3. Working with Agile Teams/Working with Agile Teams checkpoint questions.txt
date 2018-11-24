@@ -1,0 +1,45 @@
+# Questions
+
+> What are the typical Agile team roles and what parts of the development lifecycle is each role responsible for?
+
+A: Product Manager: handles strategy, roadmap, and feature definition of product(s), Project Manager: handles process management and on-time delivery, Designer: handles look and feel of a product, User Researcher: understands behavior, wants/needs, and priorities of users, Team Lead: handles technical management, direction, and quality of the project, Developers: creates and maintains the technical aspects/overall integrity of a product. 
+
+> Why do we use Kanban boards in Agile development?
+
+A: They help the team keep their workflow organized. 
+
+> Explain velocity and sprint as if you were teaching another student.
+
+A: A sprint is a certain amount of time (a week, a month, etc.) where you work hard and quickly on the project with the goal of deploying a functional piece of a product at the end (similar concept to a "90 Day Madmen Cycle" in sales, or the 90 days in the P90X fitness program). Velocity stands for how many points a team accumulates per sprint, but it's averaged with previous sprints. 
+
+> What format makes a good user story?
+
+A: "As a ___, I want ___, so ____"
+
+> What are different estimation methods teams can use? Explain pros and cons of each method. Which method would you prefer?
+
+A: Some techniques for estimating are using cards, group discussions, or scrum, and we can assign values using things like t-shirt sizes, Fibonacci numbers, and powers of 2. Fibonacci numbers tend to be about 60% bigger than the previous number in the sequence, which tends to be how humans think about relative estimates, which makes this method accurate. T-shirt sizes and powers of 2 are more familiar to most of us than Fibonacci numbers, but their results might not be as accurate. I would prefer using Fibonacci numbers. 
+
+> Give a real-world example of a development project, and explain the breakdown into epic(s), slices, cards, and tasks.
+
+A: Constructing a greenhouse is an epic. We can slice this into greenhouse preparation, greenhouse frame, greenhouse siding, and greenhouse finished. We can take each of these slices and put each one on a different card. The "greenhouse preparation" card could have the tasks of: 1. Choose a blueprint 2. Purchase necessary materials 3. Choose a location on property 4. Gather materials and necessary tools to the location. The "greenhouse frame" could have the tasks of: 1. Construct the floor as outlined in the blueprint 2. Attach posts to the floor 3. Assemble roof framework as outlined in blueprint and attach to the posts. The "greenhouse siding" card has the tasks of: 1. Cut the siding to size 2. Attach siding to walls and roof. The last card "greenhouse finished" has the tasks of 1. Make final adjustments 2. Place desired plants in finished greenhouse. 
+
+> Explain in your own words what a dual-track system is and what advantages it provides.
+
+A: It means that one team works on the "Discovery" side by thinking of new products or features, while another team on the "Delivery" side build a feature or product that's already been proven and is out of the research phase. This allows both teams to continue working with less downtime as they wait for the other to finish their work.
+
+> Choose one of the following projects and write each card that would be in the epic. Estimate each card. What columns would you need to have on your Kanban board?
+
+A: "Planning a vacation" epic has the following cards, with estimation based on Fibonacci numbers:
+1. Choose a destination (estimate: 1)
+Tasks: Decide why you want to travel, make a list of 5 destinations, research the cost of those, choose a destination. 
+2. Make travel arrangements (estimate: 3)
+Tasks: Shop/compare transportation costs of flying, cruise, etc., shop for a hotel, take care of any relevant car maintenance. 
+3. Plan Activities (estimate: 2)
+Tasks: Buy a travel guide for your destination, choose activities, book special/limited activities in advance, schedule time for sleep/rest, leave some time unplanned.  
+4. Pack/prepare for trip (estimate: 5)
+Tasks: save money, make a list of items needed for the trip, request time off of work well in advance, make sure kids/pets/house etc. have someone to care for them while you're gone, pack items as departure date approaches. 
+
+# Project
+https://trello.com/b/fB5Viv7z/hacker-news-clone
+I used the Fibonacci numbers method to estimate

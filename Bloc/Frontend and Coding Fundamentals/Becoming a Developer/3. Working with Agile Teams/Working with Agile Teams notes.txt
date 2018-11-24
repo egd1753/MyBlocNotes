@@ -1,0 +1,124 @@
+Agile- product dev methodology that relies on fast production of quality software that aligns with needs of userbase. Agile teams learn quickly ("failing fast"), practice non-stop integration/delivery, and iterative dev cycles. 
+
+Agile Manifesto http://agilemanifesto.org/principles.html
+-top priority= make customer happy through early/nonstop delivery of software
+-be welcoming of good change, even if late in dev
+-deliver working software frequently (quicker is better)
+-devs must work with business peeps daily
+-get motivated peeps do work on the project, give them the support they need, and get out of their way
+-best communication is face-to-face
+-working software=primary measure of progress
+-pace of work needs to be indefinitely sustainable
+-always paying attention to technical excellence/good design helps with agility
+-KISS is essential, "the art of maximizing the amount of work not done"
+-best work comes from self-organizing teams
+-need regular checkups to figure out how to be better
+
+
+
+Agile Teams
+	They are cross-functional (fancy word for division of labor). The roles usually include: product manager, project manager, designer, user researcher, team lead, and at least one dev. They all work in tandem to achieve goals. 
+
+-product manager (PM)="product owner" (although that may be a different role), PM responsible for strategy, roadmap, and feature definition of product
+
+-project manager (APM)=oversees process management/on-time delivery of product team(s)
+
+-designer= look/feel of product. Create mock-ups, wireframes, interactions, etc. 
+
+-user researcher=understands reasons behind behavior, wants/needs/priorities of users. They run tests, create personas (profile of certain kind of user). 
+
+-team lead=handles technical mgmt, direction, quality of project(s). They may serve as individual contributor and/or manager
+
+-dev=responsible for technical creation, maintenance, overall integrity of product. 
+
+
+
+
+Kanban Boards
+	Sign up for Trello (free Kanban tool) https://trello.com/?truid=tr3de837-2395-2072-41dd-829078a6fda6	Agile teams need Kanban boards. They're organized by columns. Technical product teams usually have these:
+
+Backlog- holds cards (work), for entirety of current project.
+
+Committed- holds work that team will complete this sprint
+
+Blocked- holds cards that can't be worked (may be awaiting clarification from Product Owner or work from another team).
+
+In Progress- holds cards that team is working on
+
+In Test- holds completed cards that are being tested
+
+Deployed- holds cards that are in production awaiting approval from Product Owner/Designer
+
+Approved- holds complete work for this sprint that has been approved by appropriate stakeholder
+
+
+
+
+Dual-Track
+	Current trend in Agile dev, where teams work on research/product design (Discovery) along with the dev(Delivery) of a proven product. This system prevents either group having dead time waiting for the others to finish their work. 
+
+Discovery- Designers, User Researcher(s), Product Owner work together to create, test, design new product/feature. They may enlist help of a dev to create high-fidelity prototype, A/B test, or 404 Test.
+
+Delivery- Project Manager, Team Lead, and Devs work together to build a proven feature under guidance of the other team. 
+
+
+
+
+Agile Processes
+	Sprints= time-delimited periods of work, ranging from one to four weeks. Goal of a sprint is to deploy a functional piece of the product. Teams have these meetings, but first, before the sprint starts:
+ 
+-the Product Manager creates feature cards and adds them to the Backlog. The Team Lead adds technical cards to the backlog (may include technical debt or tech needs that the PM isn't aware of). 
+
+-Prioritization: is held b/w the PM and Team Lead to discuss top goals for the sprint. 
+
+-Each team member reads topmost cards in backlog, then meeting for Estimation. It's held between Team Lead and Devs, with goal of tasking out/assigning time/comlexity for each card.
+
+-Planning: for Dev team and PM, to commit to set of goals for the sprint. # of cards that team commits to depends of Dev availability/velocity (velocity = # of points/sprint a dev team completes, calculated as an average, usually evens out over time as team learns)
+
+-Sprint begins, other meetings scheduled as needed
+
+-Review: First Product Owner reviews all work in Deployed column to approve/reject. The Review meeting gives Dev team chance to show off completed work this sprint to Product Owner/stakeholders. Code must be in production to demoed during Review. Any work not in production carries to next sprint. 
+
+-Retrospective: dev team's chance to make changes to their process. Usually only the Devs and Team Lead attend this meeting. They discuss what went well, what didn't, what needs to be changed. Any changes?...Action Item and Owner are specified. 
+
+-Process starts over.
+
+
+
+
+Cards
+	Cards symbolize: smallest unit of work that provides value to user. Cards include estimation, User Story, Tasks, Epic, and any relevant details. Cards have variety of types, including spikes, bugs, features, or technical items. 
+
+User Stories- written in format: "As a ___, I want __, so ___". Can be written from perspective of user, product owner, or dev. Ex.: "As a product owner, I want to track the "Add to Cart' button, so that I can understand drop-offs in the Checkout process."
+
+Tasks- include every item to be done for the card to be complete, there can be only one task for a card or many. 
+
+
+
+
+
+Estimation
+	Dev team estimates cards before committing to them in a sprint. Estimates are chosen based on size/complexity of the card relative to entire body of work, NOT relative to time. Common techniques include t-shirt sizes, Fibonacci, and powers of 2 (?????). Estimates often include values of 0, ?, and inifity (????). Estimation may occur through the use of cards, group discussions, or online tools like https://scrumpoker.online/ When estimating, entire team must agree on a value. 
+
+
+
+Organizing Work
+	A dev team is usually only developing one piece of a product line(s) at a time. Product manager may have ideas for many features/products in Discovery at a time. Each of these new projects will comprise an Epic (project). Can further break down work horizontally (by feature) or vertically (by stack layer) into slices. Slices allow team to see progress/reach milestones (goals). Slices are comprised of a variety of cards necessary to complete goal. 
+
+
+
+
+Extra Notes:
+-Agile is all about delivering value to the customer early on
+
+-Kanban board was developed by Toyota in the 50's, they can help show how work flows/keep us organized. We divide the kanban board into columns, like: To do, In Progress, and Completed. Usually is the job of the Product Owner to maintain a complete list of work items that need to be done. On the board, these items are represented with tasks or cards, also sometimes called "user stories". To help product owner stay organized, a typical board has a backlog (a sorted/prioritized list of tasks that aren't yet ready to be worked). We can add a Backlog column to the beginning of the board. Once a card is ready to be worked, move it from Backlog to the To Do column, we can even assign ownership to the card. Once started, the card moves from To Do to the In Progress column. 
+
+-technical debt: a project gets worked on, but team decides to do short cuts, but the short cuts may accumulate and make the product worse. It might be expensive to refactor the code. Changes that must be made, but haven't been completed yet, are "technical debts". 
+
+-The goal of estimation is to grab the most important cards in the backlog, and "task them out" and assign a time/complexity value to those cards. 
+
+-Humans are really bad at making absolute estimates, but good at making relative estimates. 
+
+-Developers tend to see an application as a stack: on the bottom is hardware, OS, Database/App server, Database/Access layer, Service logic layer, GUI code. To Devs, these layers look like a cake, but to the user, it's more like slices of that cake. AKA, a user might know that a database is valuable, but only in that it is needed at the bottom of their slice of cake so that a useful function works for them. However, we can't create a cake one slice at a time, so don't think about coding as a cake; think of it as writing music: instead of writing the entire piece of music for one instrument at a time, write a few bars of music for ALL the instruments.
+
+-An epic is a collection of functionality which you can sell to your audience, and a story is a piece of functionality which by itself, the user may not find that valuable. 

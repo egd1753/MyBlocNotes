@@ -1,0 +1,71 @@
+Media
+
+
+
+
+
+<img> tag: 
+	declares an image. It is an empty (void?) element. The tag attributes store the necessary info. (Note: images aren't technically inserted into an html page, but rather linked. <img> creates a holding space for the referenced image. It has multiple attributes, 2 required attributes:
+	(attributes)
+	src (required)
+		Value: URL (specifies the URL source of an image, just as the <a> tag uses the href attribute to declare where the link should go. Note: it can either be a URL, or a relative path to any file on your computer)
+	alt (required)
+		Value: text (specifies an alternate text for an image)
+	crossorigin
+		Value: anonymous, use-credentials (allow images from third-party sites that allow cross-origin access to be used with canvas)
+	height
+		Value: pixels (specifies the height of an image)
+	ismap
+		Value: ismap (specifies an image as a server-side image-map)
+	longdesc
+		Value: URL (Specifies a URL to a detailed description of an image)
+	sizes
+		Value: (none?) (Specifies image sizes for different page layouts)
+	srcset
+		Value: URL (specifies the URL of the image to use in different situations)
+	usemap
+		Value: #mapname (specifies an image as a client-side image-map)
+	width
+		Value: pixels (specifies the width of an image)
+
+
+
+Sourcing Images:
+	Sourcing images from URLs has benefit in that those are already online. 
+	DO NOT HOT-LINK
+	Using image from your computer is better, cause prevents hot-linking and works correctly on computer. However, will later need to host the image on your webpage.
+
+
+
+alt Attribute
+	provides alternative information for an image if a user cannot view it, either because of a slow connection or an error in the src attribute, or if the user uses a screen reader. Providing an accurate description is important for each image using the alt attribute. Otherwise, those with sight impairments, slow internet connections, or other issues loading the image will completely lose the context of what your page is showing. Lack of alt attributes also hinders search engine optimization (Google takes accessible HTML seriously). Basically just type a quick text title/description type thing of the image. 
+
+
+
+
+
+<video>
+	Used to be really complicated to add video, but now with HTML 5 and the <video> tag being supported in most modern browsers, it makes things much easier (no plug-ins like flash required). <video> does require opening/closing tag syntax, unlike the <img> tag. 
+	(attributes)
+	controls-adds video controls like play, pause
+	width
+	height
+	autoplay
+It's a good idea to always specify height/width, otherwise the page might flicker when video loads. Autoplay doesn't work on mobile devices like iPhone/iPad. In HTML5, there are 3 supported video formats: MP4, WebM, and Ogg. 
+	Can nest the <source> element inside <video> to list all sources that can be used to play that video, and the browser will use the first recognized format. The <source> elements tell the browser "Try this source, then this, etc., and if nothing else works, display a message saying the browser doesn't support the video" (basically the Alt attribute). Just like the <img> tag, the <source> tag uses the src="" attribute to specify the source. Also use the type attribute to tell the browser what type of file the source is, the type="" will have a value equal to one of the 3 supported video formats; the syntax should be: type="video/MP4", type="video/ogg", etc. 
+
+
+
+<audio> 
+	Works very similarly to the <video> tag, share most of the same attributes. It uses the normal open/closing syntax. Also uses the <source> element nested inside. HTML5 supports 3 audio formats: MP3, WAV, and OGG. The <source> element should include the src="" attribute, and the type="" attribute. The type attribute should have the syntax of: type="audio/ogg", type=audio/wav", etc. NOTE: the MP3 format is specified as type="audio/mpeg".
+
+
+
+
+
+
+Extra Notes:
+
+Correct syntax to embed an image in HTML: <img src="...">
+	
+

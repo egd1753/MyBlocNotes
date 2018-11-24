@@ -1,0 +1,73 @@
+Declaration: all HTML pages must begin with this, tag looks like <!DOCTYPE html>. This declaration defines the document type.
+
+Tags: building blocks of web pages, they define and describe the format/desplay of web pages. Most are in pairs, with an open (start) <tag> and a close (end) </tag>
+
+Element: All content nested within an opening tag and its closing tag. 
+
+Empty elements: HTML elements with no content are called empty elements. Empty elements do not have an end tag, such as the <br> element (which indicates a line break). HTML5 does not require empty elements to be closed. But if you want stricter validation, or if you need to make your document readable by XML parsers, you must close all HTML elements properly. Empty elements can be "closed" in the opening tag like this: <br />. An element is also considered empty if it only contains attributes
+
+Element content: the crap between an element's start and end tags
+
+Nesting: when an element contains other elements within itself, these other elements are "nested" within the main element 
+
+Attribute: extra info inside HTML element, provides additional data about that element. All HTML elements can have attributes. Attributes are always specified in the start tag, and usually come in name/value pairs like: name="value" (attribute values should always be in quotes). There are around 150 attributes in HTML, but most aren't used that frequently. Different attributes belong to different elements
+
+Boolean attribute: The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value
+
+Value: For button, input and option elements, the value attribute specifies the initial value of the element. Attributes usually come in name/value pairs like: name="value". For li elements, the value attribute sets the value of an ordered list item. The following list items will increment from that number.
+For progress elements, the value attribute specifies how much of the task has been completed. For param elements, the value attribute specifies the value of a <param> element. Basically, whatever is in "" is probably the value of that thing
+
+Syntax: basically the proper "grammar" of whatever programming language you're working in. The <!DOCTYPE html> declaration is the syntax for HTML 5
+
+Metadata: doesn't directly get displayed. The <head> tag designates metadata and links
+
+Webpage mockup: high fidelity picture of what the page should look like
+
+Markup: 
+
+Mockup: a high fidelity picture of what the page should look like
+
+Components: different sections of a page
+
+HTML forms: a primary point of interaction between user and website. Allow users to send data using a web request. They usually consit of one or more elements, such as: single/multiline text fields, select menus, buttons checkboxes, or radio buttons. Each is paired with a label that describes their purpose.
+
+?Child element: an element that is in the content of a parent element. In the serialized form of an HTML document, the child elements are enclosed between the parent element's start tag and it's end tag.? 
+
+Absolute URL: points to another web site (like action="http://www.example.com/example.htm") 
+
+Relative URL: points to a file within a web site (like action="example.htm")
+
+Root element: the term given to the element which is the ancestor of all the other elements in the document. In html, the <html> element is the root element
+
+Container: 
+
+Heading: a line of text indicating what the passage below it is about...aka: the text between <h1> and </h1> is displayed as a heading
+
+DOM:
+
+Accessibility: The ability for all people to interact with a site, system, or application.
+
+Semantics: the use of HTML tags to convey the meaning, or purpose, of the content contained within the tag. Ex: <form>, <table>, <article>
+
+Non-semantic: the tags don't describe the info inside of them. Ex.: <div>, <span>
+
+ID's: are unique. Each element can only have one ID. Each page can only have one element with that ID. 
+
+Classes: are not unique. Can use the same class on multiple elements. Can use multiple classes on the same element. Any styling info that needs to be applied to multiple objects on a page should be done with a class. Both ID's and Classes are like "hooks", but good analogy is to think of them like bar codes vs. serial numbers. Ipod in a store has a bar code (tells the store what the product is, etc.), all ipods of this same type have the exact same bar code. This barcode is like a class. An ipod also has a serial number, which is absolutely unique. If you wanted to change the price, you would change the price for the barcode, not for each individual serial number. The serial number is like an ID.
+
+Element wrapping:
+
+href: an attribute widely used, specifies the link's destination. With an <a> tag: if href attribute isn't present, the <a> tag isn't a hyperlink. To link an html page to a CSS external styling sheet, we need an href attribute in the <link> tag (the href value is what we named the document, plus a .css suffix).
+
+Hex: 
+
+?Difference between href and ref:
+
+Render:
+
+Index (HTML page): The "home"/main page for a site. Usually labeled something like "index.html"
+
+
+
+
+

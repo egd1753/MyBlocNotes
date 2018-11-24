@@ -1,0 +1,42 @@
+Recursion is the ability to call a function from within itself. It's a programming technique for iterating over an operation for having a function call itself over and over till it arrives at a result. Ex.:
+
+function count(num) {
+	console.log(num);
+	if(num >=1) {
+		count(num - 1); //count is being called within itself
+	}
+}
+count(10); //invoke count
+
+The statement above "if(num >= 1) is known as a base case, and terminates the function. When num is no longer >=1, function will exit recursive loop. Note: we could have also written a "for" loop. If we used a "for" loop, the function would ITERATE because it's not calling itself. It's usually your choice as to which one to use. 
+
+
+
+Recursive vs. Iterative Functions
+	Recursive algos/functions can be very space inefficient, so use sparingly and if you need to. ALL recursive algorithms can be done iteratively (though sometimes the code can be complicated), but sometimes programmers use recursives to make it easier to write. 
+
+
+When to Use Recursion
+	Lots of problems, but tend to follow similar pattern: when a prob consists of lots of subproblems, it's often recursive. Ex.: Fibonacci sequence
+
+var fibonacci = function(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+We write the first 2 "if" statements (our two base cases) because in the Fibonacci sequence, there's no way to start the recursion without the zeroth and first numbers. After that we can construct proceeding numbers from the two preceeding numbers: return fibonacci.....
+
+
+
+Extra Notes
+-A recursive function has one or more base cases, and one or more recursive cases
+
+-Declarative recursive function syntax looks something like:
+function recursExample(inpNum) {
+	if(inpNum .... ) 
+	call recursExample(some smaller sub-problem things)	
+}
+The "if(inpNum...)" part is the base case, and the "call recursExample..." part is the recursive case, where the function calls itself. In the case of the common recursive function example of factorials, the recursive part of the code "winds up the callstack", and when we get to the base case and terminate the function, the callstack "unwinds".
+
+-Base case: input(s) for which the function produces a result trivially (without recurring). Eventually the base case must eventually be reached, breaking the chain of recursion, which is why it's sometimes called the "terminating case". 

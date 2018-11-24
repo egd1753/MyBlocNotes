@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+.button {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    color: red;
+    padding: 20px;
+    border: 2px dotted rgb(0,0,0);
+    border-radius: 20px;
+    background: #0000ff;
+    width: 200px
+}

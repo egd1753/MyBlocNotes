@@ -1,0 +1,76 @@
+Layout
+
+
+Now adays it's not enough just to have a site with plain HTML, media, and some color. Users expect perty websites with multicolumn layouts in HTML, CSS, etc.
+
+2 columns basic layout is kind of a main page, with a sidebar type look.
+
+
+3 Ways to Lay Out a Site when using CSS:
+1. The box model- the most tenured/still most prevalent of all layout designs
+2. The flexbox model- gaining popularity
+3. The grid model- bleeding edge. Only supported on most recent/updated browsers.
+
+Box model is most well known, but spend time researching flexbox and grid models.
+Flexbox
+https://www.w3.org/TR/css-flexbox-1/
+http://flexboxfroggy.com/
+developer.mozilla.org/en-..._layout/Flexbox
+
+Grid
+https://www.w3.org/TR/css-grid-1/
+developer.mozilla.org/en-...CSS_Grid_Layout
+
+
+
+Create a Layout
+Creating multi-column using box model means we need to know CSS property `float`. This property removes default breaking property that most HTML elements have (?). Instead of stacking on top, they "float" next to each other. 
+	Ex.: if we just had a couple of <div> elements, and put in id's like "column-1", "column-2", and put in sample <p> elements, when we display them inside a <body> of simple HTML doc, the column <p> text will stack like rows. To style them properly, we can use CSS property `float` like this:
+#column-1 {
+	float: left;
+}
+We can then add some width, background color, and padding.
+The code would look something like this:
+ #column-1 {
+  float: left;
+  width: 25%;
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
+#column-2 {
+  padding: 10px;
+}
+This is the essence of a 2-column layout!
+
+
+
+Using Chrome
+	Open your website project through Chrome, load the page and right click to find the Inspect button. The central section=elements tab. Can select any element and two boxes on right will update. Top right=let's you add/remove CSS and see the updates live (good for playing around with the layout). Bottom right=how much space (in a box form) the selected element is taking up. 
+	Other useful tools in Chrome Developer Tools, but don't worry about them till I master layouts and fundamental JavaScript. Then review something like https://developers.google.com/web/tools/chrome-devtools/
+
+Recap:
+`float`:Removes the default breaking property that most HTML elements have.
+
+The Box Model: A box that wraps around every HTML element. It consists of margins, borders, padding, and content.
+
+
+
+
+Extra Notes:
+The CSS float property specifies how an element should float. Can have values of: left (floats to the left of its container), right, none (will be displayed just where it occurs in text, this is default), inherit (inherits float value of its parent) In simplest use, `float` can be used to wrap text around images (can tell an image to float to the left of text inside a box for example).
+
+The CSS clear property specifies what elements can float beside the cleared element and on which side. Can have values of none, left, right, both, or inherit. Most common way to use `clear` is after have used `float`. 
+ 
+Box Model
+	The boxes are nested (again, like nesting dolls) and from innermost to outermost, the order goes like this: content, padding, border, margin. Every single element that we're selecting and messing with in our style sheet has these 4 boxes, but the outer three aren't seen unless we specify them (otherwise they're just transparent). 
+	Content box (innermost box) contains all media, text, etc. The properties we can see for the content box are things like color, width, height, font-size, line-height, background-color, etc. If we change the background color, we might notice that the text will be close to the edge of the content box, so to give more space and make it look better we'll add padding. (Note: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the FULL size of an element, you must also add padding, borders and margins.)
+	Padding box (2nd box from innermost) 
+	Border (3rd box) there are 3 properties for the border: border-color, border-width, border-style
+	Margin is the space between the side of the page and the border. Might be asking "Wait I didn't add margin, so why am I seeing some margin?" Cause the browser defaults to adding a little bit of margin between elements. Therefore, margin is the space between page edge and border, AND between the elements. 
+	
+
+Containing block: The size and position of an element are often impacted by its containing block. Percentage values that are applied to the width, height, padding, margin, and offset properties of an absolutely positioned element (i.e., which has its position set to absolute or fixed) are computed from the element's containing block. The process for identifying the containing block depends entirely on the value of the element's position property:
+
+
+

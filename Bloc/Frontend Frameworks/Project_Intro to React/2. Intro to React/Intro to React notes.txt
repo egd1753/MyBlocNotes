@@ -1,0 +1,38 @@
+React is:
+1. Declarative 
+	Allows us to control flow and state in our applications by saying "It should look like this". Note: Declarative programming is different from imperative programming, which forces us to say things like "This is what it should do step by step". Declarative Reacct reduces pain of creating interactive UI's and updating our views when data changes; we can simply design views for each state in our app and React will update and render just the right components. (For more info check out https://tylermcginnis.com/imperative-vs-declarative-programming/ ) Declarative views in React makes it easier to manage our app's state, and makes code more predictable/easier to debug. 
+
+2. Component-Based
+	Can build encapsulated components that manage their own state/compose them to make complex UIs. We write component logic in JS instead of using templates, so we can quickly pass rich data through app and keep the state out of the DOM. React emphasizes reusable components. Components manage their own state, we can structure them together into more complex UIs (ex.: nested components). 
+
+3. Performant and Fast
+	Via "virtual DOM" updates. React maintains internal representation of the rendered UI ("virtual DOM") that renders only the changed elements. React only updates the necessary parts of the DOM, which means big increase in performance. 
+
+
+
+Virtual DOM
+	Big benefit of React is the way it deals with DOM updates. When React first initializes component, it calls "render" method, generating lightweight representation of the view. When data changes, React calls "render" again. A component's "render" method tells React what DOM should look like at any given time. React calculates the diff between this description and in-memory DOM rep to compute the fastest way to update the browser. The "diff-ing" mechanism allows React to apply minimal changes to DOM, making it very fast. 
+	The workflow looks like a one-way flow from app, to Virtual DOM, to DOM, back to app. When goes from App to Virtual DOM: builds/rebuilds the component tree marked dirty in Virtual DOM. When goes from Virtual DOM to DOM: runs diffing algo to compare previous created component tree with the new one and does reconciliation. When goes from DOM to app: events are triggered.
+
+
+
+Immutability and Unidirectional (One-way) Data Flow
+	Why is immutability important? Tracking changes/maintaining state can get complicated. Subscribing to data events throughout the app creates massive overhead of book-keeping which can hurt performance/cause unpredictable sync issues. AngularJS uses two watchers (https://stackoverflow.com/questions/34519889/can-anyone-explain-the-difference-between-reacts-one-way-data-binding-and-angula). 
+	Two-way binding means that UI fields are bound to model data dynamically (when a UI field changes, model data changes with it, vice versa). 
+	One-way (unidirectional) data flow means model is the single source of truth. Changes in UI trigger messages that signal user intent to model (or "store" in React). Only the model has access to change the app's state. One-way data flows are deterministic; data always flows in a single direction, and immutable data ( https://facebook.github.io/immutable-js/ ) cannot be changed once created. One-way flows result in simpler application dev and enhance change detection techniques with simple logic. Persistent data doesn't update the data in-place but instead yields newly updated data. 
+
+
+JSX
+	Essentially plain old JS expressions, and a special HTML-like syntax. JSX combines markup and logic. It allows you to write "HTML tags" in JS, or XML-based object representations of these HTML tags. Here is the documentation https://reactjs.org/docs/jsx-in-depth.html
+
+
+ES6 and State-of-the-Art JS
+	ES6 (ES2015) is great for writing concise JS. Can write things like .map(element => fn(element)) instead of    for element.name as element.id in elements as element   . Also have things like arrow functions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), classes (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), template literals (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), let (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), const statements (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) If need a JS refresher check out https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+
+Resources
+Facebook article about rationale behind building React https://reactjs.org/blog/2013/06/05/why-react.html
+
+Immutable JS using ES6 and beyond 
+https://wecodetheweb.com/2016/02/12/immutable-javascript-using-es6-and-beyond/
+

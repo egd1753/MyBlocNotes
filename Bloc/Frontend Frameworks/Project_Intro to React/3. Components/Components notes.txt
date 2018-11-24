@@ -1,0 +1,5 @@
+
+
+Intro
+	React components are foundational building blocks of React. Components ( https://www.webcomponents.org/ ) are small/reusable chunks of code responsible for one job (often involves rendering HTML). They are similar to Angular "directives". Can think of a component as a collection of HTML, CSS, and JS, and some interal data specific to it (metadata?). Components contain "state" and "props" objects. React renders components, using only data from those objects. 
+

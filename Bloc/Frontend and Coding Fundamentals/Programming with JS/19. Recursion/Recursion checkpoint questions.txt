@@ -1,0 +1,31 @@
+# Questions
+
+> What is recursion?
+
+A: Recursion is similar to an iterative function, but the main difference being that a recursive function can call itself from within the function.
+
+> When would a programmer want to write a recursive function instead of an iterative one?
+
+
+A: Recursive functions can be useful for problems that consist of many sub-problems, as these kinds of problems can be very difficult to write using iterative functions.
+
+> What is a base case and what is its role in a recursive function?
+
+A: The base case are input(s) for which a function can eventually produce a result with recurring. It is analogous to the condition in a `for` loop, and in the case of a recursive function, a base case causes the function to eventually terminate (otherwise we would create an infinte loop).
+
+> What would happen if a programmer did not utilize a base case within a recursive function?
+
+A: The recursive function would keep calling itself, but with no base case, the function can never terminate. A recursive function without a base case is an infinite loop. 
+
+# Code Practice
+
+```javascript
+
+function factorial(n) {
+ 	if (n === 1) {
+		return 1;
+    }   
+	return n * factorial(n - 1);
+}
+
+```

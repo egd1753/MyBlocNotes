@@ -1,0 +1,20 @@
+Follow these instructions for every assessment (there will be a number of them).
+
+Assessment takes place over Google Hangouts/Broadcast.
+
+
+Material Covered
+	Each assessment can over anything that has been taught up to date. First assessment can include: HTML, CSS, JavaScript, Git, GitHub, and anything else. Types of questions:
+-Tell assessor what is correct/incorrect code for HTML, CSS, or JS
+-Write a JS function that accepts some arguments and returns some data based on those arguments (ex.: write a funtion that accepts an array of numbers and returns the smallest number from that array).
+-Explain/discuss career goals/desired field
+-Explain any part of a standard Git Workflow
+Each assessment is comprehensive.
+
+
+How to Study?
+	Use stuff I've learned on my own project. Examples:
+-Build a clone of Hacker News (HTML and CSS)
+-Write JS that will print out the song "99 bottles of beer" to the console page
+-(extreme mode) 
+

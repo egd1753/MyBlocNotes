@@ -1,0 +1,41 @@
+An array is a list of items
+
+Creating an Array (2 ways)
+	Array literal: let clothes = [];   We call it literal cause you "literally" declare what they look like with []. This is the most common way. 
+	Constructor method: let clothes = new Array();	No matter which method, the result is []. All items or elements you add to array are listed/separated by commas inside the square brackets. 
+
+
+Using Arrays
+	Zero Indexing: In JS, arrays are zero indexed, meaning you always count starting at 0. Ex.: var clothes = ['hat', 'shirt', 'pants'];    clothes[0] returns 'hat', clothes [1] returns 'shirt', etc.
+
+Adding to Arrays
+	What if we typed clothes[3]? Would return nothing cause is not 3rd item. However, can type clothes[3] = 'shoes' and that will change (mutate) the array to then include 'shoes' as the 3rd item. 
+
+
+Updating Arrays
+	What if need to change 'shirt' with 'collared shirt'?. Just type clothes[1] = 'collared shirt' to update it. 
+
+
+
+Common Array Functions
+	Arrays have built in functionality just like strings, numbers and other data types. 
+
+- indexOf()	tells you first index of element in array. In previous example, clothes.indexOf('pants') returns 2
+
+- join()	joins all elements of array into new string. Can tell it what to use to separate each item. clothes.join(' ') returns a string: "hat collared shirt pants shoes". clothes.join(', ') returns 'hat, collared shirt, pants, shoes'. The clothes array remains unchanged.
+
+- push()	will add ite3m to end of array. 
+
+- unshift()	will add item to start of array and move other elements over one index.
+
+- map()		will go over each element (or iterate through) an array and return a change you want to execute on each element. Ex.: 
+let smallClothes = clothes.map(function(article) {
+	return "small-" + article;
+});
+This will return ['small-sweater', 'small-hat', etc.] and also store it in (or assign it to) the smallClothes variable. Best part of map() is it doesn't change value of existing clothes array, so it doesn't mutate at all. Therefore we can now have smallClothes and original normal clothes array.
+
+
+
+Loose vs. Strong Typing
+	JS is "loosely" or "weakly" typed language, meaning you don't have to declare intent to store a string, array, number, etc. in a variable. Just declare a variable and store the value. Ex.: let name = 'Alex';	compare that to strongly typed language like C#, which would look like: string name = 'Alex'; (you have to tell C# compiler that you intend to only store strings in the name variable). JS lets you change value of variable to any data type. In previous ex., could say: name = 45	and not a prob in JS, but in C# would get error.
+	Also in JS, can store multiple data types in same array. Ex.: var randomness = [4, 'Alex', null, 'food'] (doesn't mean you should do this though! Much easier to work with data in appropriately named lists). 

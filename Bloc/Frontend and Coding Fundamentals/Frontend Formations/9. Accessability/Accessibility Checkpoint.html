@@ -1,0 +1,57 @@
+# Questions
+
+> Why is accessibility so important?
+
+A: It improves the user experience (especially for those using screen readers/have difficulty distinguishing color), it improves search engine optimization, and it's easier for future devs to read the source code.
+
+> What are some forms of accessibility as it relates to web development?
+
+A: Some forms are using proper semantics, using tables only for data, avoiding nested drop-downs that need fine motor skills to operate, making text/background clear with high contrast, etc. 
+
+> In your own words, what does semantic mean?
+
+A: Semantics involves studying meaning, symbols, etc. in a language, and how to communicate most effectively using that information.  
+
+> What is semantic HTML?
+
+A: Semantic HTML is descriptive, and tags are used that best describes the nested content. 
+
+> What are some common accessibility issues your end users might have? What are some steps you would take to make their experience on your site better?
+
+A: Low contrast for text/background can make it difficult to see, so make sure text is contrasted, bold, etc. Also avoid auto-playing media, and UI components that are difficult to use without fine motor skills. Make sure `<img>` tags have the `alt` attribute, or user could have difficulty reading page if it fails to load correctly. 
+
+> What do we use the `<label>` tag for?
+
+A: The `<label>` tag is used in forms to help label an `<input>` element.
+
+# Code Practice 
+
+```html
+
+<!DOCTYPE html> <!--Declared the document type, because required in html-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cats are the best!</title>
+  </head>
+  <body>
+        <header> <!--Changed tag to <header> and moved under <body> to make it easier for devs to read-->
+            <h2>My awesome site</h2>
+        </header> 
+     <!--Removed table, because we only use tables for data-->
+        <aside>
+            <p>Sidebar will go here</p> <!--Changed <td> to <aside> because we don't use tables for this-->
+        </aside>
+        <main> <!--Added <main> instead of the <table>--> 
+            <article> <!--Added <article> for better clarity-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>   
+                Check out this cat:
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="Image of cat" height="200" width="200"> <!--Added the alt attribute and height/width to make the <img> element more accessible-->
+        </main>
+        <!--Removed the multiple <br>, this sort of styling is clunky for screenreaders, and is better coded in CSS-->    
+        <footer>Isn't it a great cat?!?</footer> <!--Changed <h1> to <footer> to improve semantics-->
+  </body>
+</html>
+
+```

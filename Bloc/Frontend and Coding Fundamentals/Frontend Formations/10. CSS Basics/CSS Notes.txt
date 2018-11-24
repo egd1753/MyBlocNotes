@@ -1,0 +1,128 @@
+CSS Basics
+
+
+
+Stands for Cascading Style Sheets. CSS allows you to control the color of text, style of fonts, the spacing between blocks of text, layout design and much more.
+Advantages: saves time, loads pages faster, easier maintenance, multiple device compatibilities. Using external style sheets helps keep the linked HTML pages looking and feeling consistent.
+
+CSS describes how HTML elements display on a website. The key to understanding CSS is understanding selectors. Selectors allow you to retrieve specific HTML elements and apply styles to them so that you can make beautiful websites!
+
+Adding Style to HTML
+Inline Styling
+	When CSS is written inside an HTML tag, using `style` attribute. Not usually considered best practice, try to use just for unique style for single element. Ex.: <p style="color: black; font-size: 1.1 em;"> I am a styled paragraph.</p> The `style` attribute just like any other, goes inside the opening tag right after the tag name, followed by = and "value". 
+
+Internal Styling
+	Used when a single document has a unique style. Can define internal styles in head section by using <style> tag.
+Ex.: 
+<head>
+	<style>
+		h1 { color: black; }
+		p {font-size: 1.1 em; }
+	</style>
+</head>
+This would apply color to the <h1> headers and change font size of the paragraphs.
+
+External Styling
+	uses an external style sheet to change the look of an entire website by changing just one file! Each page that uses the external style sheet must include a reference to it inside of a <link> element in its <head> tag. You will most commonly use external styling.
+Ex.: 
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+The <link> tag links the HTML doc to the style sheet titled `style.css`. These sheets can be named anything, but should always be saved with .css extension. The rel="" attribute (short for relationship) defines the relationship that the linked source has to the doc, it will normally have a value of "stylesheet" (meaning "the referenced doc is a style sheet") This is almost the only rel value that you will ever use. The type="" attribute defines the internet media type, and "text/css" specifies that the content is CSS.
+
+Differences between these 3 methods: Inline is written inside an HTML tag by using the `style` attribute. Internal is defined in the head section of an HTML page by using `<style>`, and sets parameters for the entire document. External needs <link> declared in the <head> element. 
+
+
+Creating an External Style Sheet
+	Save a text doc with the .css extension (style.css for example). Inside that file, we will add style to the elements by using selectors. We will want to link the style sheet to the HTML file that we're trying to style, by using <link>.
+
+
+Primary CSS Selectors
+	Selectors allow us to target specific HTML elements and apply styles. 
+
+Tag Selectors: The tag selectors must match atleast one HTML element of the same name, so the syntax looks like this: body{} (selects the <body> element), and nav{} (selects all <nav> elements). You don't need the element to have an ID or a class to select it using this method.
+
+ID Selectors: ID selector is declared using # preceding a string of characters. The string of characters must match any HTML element that has an ID attribute with the same value. The type of element doesn't matter, so long as the element has an ID it can be selected with an ID selector. ID's are unique, so should only have one element with a specific ID. This makes ID selectors inflexible, cause the styles used in the ID selector can only be used once per HTML document. 
+> Why are ID selectors inhibiting?
+A: ID's are unique, belonging to only one element. Additionally, the styles used in the ID selector can only be used once per HTML document.
+
+
+Class Selectors: Declared with a dot preceding a string. The class selector matches all elements on the page that have matching class names. We can reuse styling by having multiple elements with the same class.
+You can also specify that only specific HTML elements should be affected by a class. To do this, start with the element name, then write the period (.) character, followed by the name of the class.
+HTML elements can also refer to more than one class. 
+
+
+
+
+
+Combinators
+Descendant Combinator (or Selector)
+	Lets you combine two or more selectors to be more specific in the selection method. Ex.:
+#outerelement .innerelement {}
+Will apply to all elements that have a class of innerelement that are inside an element with an ID of outerelement. Use this with caution, cause when using the descendant combinator in CSS they can unnecessarily restrict styles to a specific context. The descendant selector matches all elements that are descendants of a specified element. This selector will apply to all elements that have a class of (ex.:) innerelement that are inside an element with an (ex.:) ID of outerelement.
+
+Child Combinator
+	Selector that uses the child selector/combinator, is similar to a descendant combinator, except that it targets only immediate child elements. Ex.:
+#outerelement > .innerelement {}
+This is basically the same as the descendant combinator, except that instead of a space we use a > in between. The selector matches all elements that have a class of innerelement that are intermediate children of the #outerelement element. There can't be another element wrapping .innerelement. The child selector selects all elements that are the immediate children of a specified element. The following example selects all <p> elements that are immediate children of a <div> element:
+Example
+div > p {
+    background-color: yellow;
+}
+The child selector is like this: x > y{}   this means that we are selecting all y where the parent is x
+
+	
+Pseudo-Classes
+A kind of selector, is a keyword added to a selector that specifies a specific state of the selected element. A few common ones are: 
+:hover  -We use :hover to style an element when the user's mouse is above it, like when you hover over a link.
+Ex.:  a:hover {}
+the `a` denotes a generic anchor tag. 
+
+:active{}   -used to style an activated element, for ex. a tapped element on a touchscreen device:
+
+:visited{}  -used to style visited links
+
+: first-child{}  -used to represent the first element among a group of sibling elements
+
+:last-child{}  -Used to select the last child of its parent elements
+
+:noth-child(2){}  -Used to select the nth child of its parent element. To target the second child of a parent element, use a (2), for the third, (3), and so forth
+
+
+
+Extra Notes:
+-To select an element with a specific class, we can say something like:
+.center{
+	text-align: center,
+	color: red;
+}
+In English this means: "This style will be applied to HTML elements who have class="center". If we want to be more specific, we can say:
+p.center{...}
+In English this means: "Only <p> elements with class="center" will be affected.
+
+-If we want the same styling on multiple elements, instead of selecting each element and writing the styling three times, we can select multiple elements, which minimizes code. Ex.:
+Instead of 
+h1 {...}
+h2 {...}
+p {...},   we can just say h1, h2, p {...}
+
+element+element Selector:
+div + p {}
+This means: select and style every <p> element that is placed immediately after <div> elements (Note: it's immediately after, not inside, the first specified element)
+
+
+-CSS syntax:
+	A CSS rule-set consists of a selector and a declaration block. The selector can be any one of the ones already discussed, and the declaration is the part within the curvy brackets. A CSS declaration consists of a property (ex.: color, font-size, align-content, background, etc.), then a value for that property (blue, 12px, etc.). The property and value are separated by a : and we mark the end of a declaration with a ; The whole thing should look something like:
+h1 {
+	color:blue;
+	font: 12px;
+}
+
+
+.foo p{} means: Select all <p> within the class of foo (this could also mean other <p> that are nested inside of a <div> that's nested inside of <div class="foo">...means any <p> between the opening and closing tag that has a class of foo.
+
+.foo > p{} means: 
+
+
+
+

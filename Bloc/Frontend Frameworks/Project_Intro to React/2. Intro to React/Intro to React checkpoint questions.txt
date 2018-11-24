@@ -1,0 +1,10 @@
+Exercises
+
+> In your own words, explain React's Virtual DOM. What gives React its fast performance?
+
+A: React's virtual DOM is like a copy of the real DOM that stays in memory. When we change a node, React computes the differences between the virtual DOM and the real DOM, and efficiently updates what the browser displays. This allows React to be very quick, because we don't have to query the DOM (which can be "expensive") and then update the entire DOM for one small change. 
+
+> In your own words, describe React's core concept of uni-directional data flow. Draw diagrams to illustrate. Discuss the answer with your mentor in your next session.
+
+A: In React, data flows from parents to children, or children to parents, but not children to unrelated children. However, we can send info from child to a shared parent of the other child we want to communicate with. In essence, throughout an app data will flow in one direction, giving you better control over it. 
+

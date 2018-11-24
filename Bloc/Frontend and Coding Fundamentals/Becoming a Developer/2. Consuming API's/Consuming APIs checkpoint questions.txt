@@ -1,0 +1,72 @@
+# Exercises
+
+> Explain the difference between the request/response cycle.
+
+A: A request is made by a client to a server (to view a web page, for exampe). The server then sends a response back to the client, with data like HTML content of the web page, error codes, etc. 
+
+> List common response codes and their groupings.
+
+A: 404-client error response; 502-server error responses; 400-client error responses; 200s-successful responses; 300s-redirection messages 
+
+> Explain the common HTTP verbs: GET, POST, PATCH, PUT, and DELETE.
+
+A: GET- is the most common verb, and is used to get a page from a server. POST-creates a new object on a server, like submitting a form. PATCH-updates an object on the server, like changing your password or bio info on a page. PUT-replaces an object on a server, and is used when sending a complete replacement for an object (otherwise we would use PUT). DELETE-is used to delete an object from a server.
+
+> Explain the difference between synchronous and asynchronous code.
+
+A: Most code runs synchronously, meaning scripts execute one-by-one in order. Asynchronous code, like making a call to an external website, is asynchronous, meaning that the code continues to run before it has received a response. Asynchronous code can run simultaneously with other code, and the order in which they execute can be random. 
+
+> Explain what a JavaScript promise is.
+
+A: A promise functions like a placeholder for a value that could have been unknown when the promise was created. They can be returned synchronously from an asynchronous function. 
+
+> Explain why CORS exists and how we can work around it.
+
+A: They allow you to access restricted resources on a page from page outside of the resources' domain. Modern browsers restrict cross-origin HTTP requests by default, but we can work within CORS restrictions by requesting through a proxy site. 
+
+> Create a fetch request in JavaScript.
+
+A: 
+``` javascript
+
+let url = "https://cors-anywhere.herokuapp.com/api.github.com/users/chriscoyier/repos";
+
+fetch(url)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.log('An error occured: ${error}');
+    })
+
+```
+
+> It is time to build HackerNews from scratch! But you need easy access to an API for...
+
+A: 
+```javascript
+let url = "https://cors-anywhere.herokuapp.com/" + "https://newsapi.org/v2/top-headlines?sources=hacker-news&" + "apiKey=a7561eaf648d451cb5df7e7fe274d84f";
+
+let req = new Request(url);
+
+fetch(req)
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+            let articles = data.articles; 
+            let storyList = document.createElement('ul'); 
+            let body = document.querySelector('body'); 
+            body.appendChild(storyList); 
+            articles.map(story => { 
+                let storyItem = document.createElement('li'); 
+                storyItem.innerHTML = '<a href="' + story.href + '">' + story.title + "</a>"; 
+                storyList.appendChild(storyItem);
+            })
+
+    })
+    .catch(e => {
+        console.log(`An error occurred: ${e}`);
+    })
+
+```

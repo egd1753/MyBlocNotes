@@ -1,0 +1,34 @@
+# Questions
+
+> What does "DRY" stand for? What does the "DRY principle" imply in programming or software development?
+
+A: Stands for "Don't Repeat Yourself". It means that we want to reuse code as much as we can, we want it easy to maintain, and modular. By exploiting abstractions, we can say things in a general manner so that we can extend/modify something that already exists, instead of having to rewrite every instance of that thing. 
+
+# Code Practice
+
+```javascript
+
+class Product {
+	constructor(item, price, size) {
+		this.item = item;
+		this.price = price;
+		this.size = size;
+} 
+	getItem() {
+		return this.item;
+    }
+	getPrice() {
+		return this.price;
+    }
+	getSize() {
+		return this.size;
+    }
+}
+
+var shirt = new Product('Mens T-Shirt', '$15', 'Medium');
+
+var jacket = new Product('Leather Bomber', '$80', 'Medium');
+
+var scarf = new Product('Black Infinity', '$15', 'Small');
+
+```

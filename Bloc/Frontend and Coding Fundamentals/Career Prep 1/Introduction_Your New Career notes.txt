@@ -1,0 +1,73 @@
+Most students joined Bloc to switch careers. Keep this in mind throughout program...there's more to switching a career than just technical skills, need to work on career prep stuff too. 
+
+
+
+Your New Career
+	A successful job search, especially in a new field, takes lots of planning/prep, can't just put it off till the end of program. What to expect to learn from Bloc's Career Preparation and Career Services:
+
+-Brand Yourself as a Developer: will learn to act/think about yourself as a dev, not someone who dreams of being a dev
+
+-Learn How to Network Like Pro: will master it in all forms, even if an introvert. Will learn how to present yourself, talk about your experience, leverage connections
+
+-Make Your Materials Job Search Ready: will receive feedback/guidance in creating most effective job search materials including resumes, cover letters, LinkedIn, etc.
+
+-Practice Technical/Non-Technical Interviews: will receive training in latest technical interview techniques and have chances to practice both technical and behavioral interviews with experienced hiring managers.
+
+-Navigate a Job Offer: You will receive coaching in how to evaluate and negotiate job offers to maximize your post-Bloc outcome.
+
+Most training occurs while still in program. Each module has career exercises. You'll work with both mentor and Career Services team to be job ready. 
+	After mentor-led section of program, will continue to work with Career Services. Bloc won't place me in a job or do job search for me; I have to put hard work and stretch myself beyond comfort zone. Also important stuff for Tuition Reimbursement Guarantee
+
+
+
+Tuition Reimbursement Guarantee, Their Promise
+	Here’s what we’re guaranteeing:
+-You’ll get a paying job in the web development industry
+-Within 180 days of graduating
+-This may include full-time, contract-to-hire, contractor, and internship positions
+
+But...
+-You must complete each phase of the program, in full, including certification.
+-If you don't pass an assessment after 3 attempts, you will no longer be eligible for tuition reimbursement, even if you pass at a later time.
+-If you commit any acts of academic dishonesty (cheating, submitting work that isn't your own, etc.) you will automatically lose your guarantee.
+-You must look for a job in a valid location.
+-You must live in one of the top 22 major North American metro areas listed below which encompasses over 100 cities...
+-You must be eligible and able to relocate to work in the metropolitan area(s) you chose by the time of your official job search, which kicks off upon the completion of your program.
+-You must be able to write and speak in fluent English.
+-You must be at least 18 years or older.
+-You must meet all of the Career Services criteria listed below:
+-You must complete all career prep checkpoints, in full.
+-You must start your job search when prompted to.
+-You must attend at least 3 networking events per month.
+-This can include meetups, conferences, coffee meetings, informational interviews, etc.
+-You must apply to a minimum of 10 development jobs per week.
+-3 of the 10 weekly job applications must be sent through cold outreach or through a personal or professional connection.
+-You must track all job applications, including details of each application, in your job tracker sheet (template to be provided).
+-You must track all correspondence and interviews related to your job search and be able to furnish details upon reimbursement request relating to employer, position, date of submission, and application materials.
+-You must send weekly Career Progress Updates to the Career Services team during the job search phase.
+-You must reply to requests and keep response times with the Bloc Career Services team under 72 hours.
+
+
+Advice from previous students:
+"Work your contacts, and be patient. Cultivate genuine networking relationships through Meetup.com or coffee dates with other developers and designers. I became a member of Women Who Code very early on and the group has been enormously supportive and helped me through many moments of doubt." Sara, Developer
+
+"I wish I had blogged and documented my experience from day one. It's really valuable to be able to immediately respond to "show me what you've been working on" with a link to a portfolio, a github, and a blog that documents your thought process and problem solving skills. I went to a lot of meet-ups in my area. Even though my job is in an unrelated language, I gained a lot confidence in my ability to talk in a coherent and technical way to other people in software by attending and participating at these. I think you should think of networking in a more broad way, not just "will this person offer me a job?" but how your presence in any given situation will help you grow into a person who will be getting job offers." Alex, Software Engineer
+
+"Make things worth talking about. Go the extra mile so you’re proud of what you've built. Go the extra mile to create things that catch people's eye, that gives them something to talk about, a reason to take a chance on you." Kasey, Full Stack Developer
+
+"This is, and always be, an effort based system. If you want it, you need to work hard to get it. Don't be afraid to be an individual, show people why you matter, and extend your previous experience in life (whatever that may be) to getting the job that's right for you!" Jack, Jr. Backend Ruby Engineer
+
+"There will be times when you feel like giving up during your job search. It may not happen after your first 10 rejection emails but the feeling slowly creeps in around 50 rejection emails and a few botched interviews. Each of those applications and interviews help you think through your story and how you present yourself. You get better every time you read another job listing, adjust your cover letter, answer the long online forms, and speak with countless recruiters that may or may not have an interest in you. When it feels really hard, you can allow yourself an afternoon of sitting on the couch. But after you've eaten and rested, get back at it. Keep going. It's worth it." Tim, Software Developer
+
+"The one thing that I feel cemented my getting my first developer position wasn't how I looked on paper or the projects I showed (mind you, this is still very important), but that during the entire interview process from phone to in-person, I was excited. Almost obnoxiously so. When asked where I wanted to be in five years, I let all my hopes and dreams show through me without filter or reservation. When asked about a technology I had no clue about, instead of saying "No.", I said," No, but that sounds really cool, what is that?" And this wasn't for show in any way. I wanted them to know how much I was excited to work on their website, not get the job. I think it's important to be honest about what you can and cannot do, but don't let your nerves or inexperience hamstring you; if you are truly excited about coding, and curious about things you don't know, let that side of you show! This not only reassures the people interviewing you that you will be able to learn and adapt to whatever challenge this job entails, but it makes them WANT to work with you. Enthusiasm is infectious, and I feel that the desire to learn is key in securing your first programming job." Benjamin, Junior Developer
+
+"Networking with people in the industry is one of your most powerful resources when it comes to the job hunt. Connect with as many people as you can, no matter what position they hold in a company and remember that the way you interact with people and the way you engage with them plays a big role into getting your foot through the door! Don't allow rejection to discourage you! It's a big part of the process, and each rejection can serve as a learning tool to better you for the next opportunity." Logan, Software Engineer
+
+
+
+Further Reading
+When You First Say...https://medium.com/newsonthebloc/when-you-first-say-im-a-developer-f1ca1830ff18
+
+Tips for Bloc Students https://medium.com/newsonthebloc/tips-for-new-bloc-students-1d540089c026
+
+Overcoming Imposter Syndrome https://www.huffingtonpost.com/entry/7-coping-strategies-to-overcome-impostor-syndrome_us_58925a49e4b0aa61e8f534a9

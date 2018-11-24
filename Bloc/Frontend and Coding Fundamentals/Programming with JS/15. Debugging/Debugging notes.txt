@@ -1,0 +1,37 @@
+-Most important part of learning to debug code: knowing when/how to step away. New devs easily fall victim to tunnel vision. Avoid running code repeatedly cause you think it should work, or resorting to random trial error tactics.
+
+
+Step Away
+-If you are stuck on the same code for more than an hr, step away. This is backed by empirical research and personal experience of seasoned devs. Two doctors who teach an online course about learning:  https://www.coursera.org/learn/learning-how-to-learn This course is powerful, and free!
+	When walk away, do something non-technical: walk the dog, eat, exercise, meditate, etc. something that will allow brain to work on the problem in the background while you focus on something less computational. The answer will often appear magically. 
+
+
+Reading Documentation
+-First time reading documentation for new language, API, etc. can be confusing, and this is normal (especially for new devs). Unclear/confusing docs often are due to:
+	-Vocabulary: most common prob, author uses too many technical terms. Look up words you don't know and get a general idea of their meanings, then reread the problem sentences. 
+	-What goes where: Authors commonly assume the readers know how to use their code in the project, and don't show you certain parts of their app, library, API, etc. If unsure, try Googling "<thing> example" or "<thing> tutorial" where "<thing>" is name of app, API, etc.  
+
+Good documentation means the author should make fewer assumptions. Should use plenty of examples showing what goes where. Docs should be updated frequently. 
+
+
+
+Chrome Dev Tools
+-Built into Chrome, lets you see/change HTML, CSS, JS of every visited page and page you're developing. 
+	-Elements Tab: can see and live-edit HTML and CSS. If click "Computed" tab in CSS section, can see selected element's actual width/height, various properties, visual rep of box model. Handy for when element seems to be taking up more/less space than expected. Official documentation:
+https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
+	-Console Tab: where can tell app to send any info you want to see during execution (aka console.log). Note: if code isn't printing as expected, try using "console.log("Current value of varName is: " + varName);	Can also use console to execute arbitrary JS code, like "document.write('Boom!');
+
+
+
+Reading a Stack Trace
+	-Mozilla Dev Network says a call stack is a mechanism for an interpreter (like JS interpreter in a browser) to keep track of its place in a script that calls multiple functions--what function is currently running, what functions are called from within that function and should be called next, etc.
+	-When script calls function, interpreter adds it to call stack and starts executing
+	-Any functions called by THAT function are added to call stack further up, will run where their calls are reached.
+	-When main function is finished, interpreter removes it from stack and resumes execution where it left off in main code listing.
+	-If stack takes up more space than what it was assigned, it results in "stack overflow" error. If an error is thrown, the console tab will likely provide a stack trace, which is a representation of a call stack. It's a report of the active stack frames at a certain point.
+	Ex.: If ran some JS and console gave an error like "Uncaught SyntaxError: Unexpected token > .......index.html:10"     This one line is a stack trace, console is saying to look at a specific line number. "Unexpected token at..." are usually syntax errors
+
+
+For more info on Chrome DevTools, look over  https://developers.google.com/web/tools/chrome-devtools/javascript/
+
+

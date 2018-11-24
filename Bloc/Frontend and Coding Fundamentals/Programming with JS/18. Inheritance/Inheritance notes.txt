@@ -1,0 +1,19 @@
+It's important to know to to work with objects, so you can be a better developer. Make code modular and easy to maintain, and make code abstract. Keeping code DRY involves taking something that already exists and extending it. (We can do this by creating a prototype, and then slightly modifying it for each instance). 
+
+Classes are essentially just "special functions" built around the "class" and "constructor" keywords. Even when using classes in JS, prototypes are still employed behind the scenes. In a sense classes in JS are "syntactical sugar". 
+
+
+
+Inheritance, Prototypcal Chain, and _proto_
+	JavaScript has implemented a `class` keyword, but it is not really a class-based language. "Inheritance" is more accurately called "delegation". 
+	All objects in JS have hidden [[Prototype]] property. This property may reference another object or may be "null". Use obj._proto_ to access it. The object referenced by [[Prototype]] is called a "prototype"
+
+(short doc on _proto_ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+
+(differentiate _proto_ and `prototype` properties https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript)
+
+We can use the hidden [[Prototype]] (more specifically "prototypal chain") to mimic inheritance. When we access a property on new object, it checks object's properties first. If not found, it checks object's [[Prototype]], on and on till it gets to Object.prototype (the root delegate for most objects). If it reaches top level and property still not found, returns "undefined". 
+
+
+
+

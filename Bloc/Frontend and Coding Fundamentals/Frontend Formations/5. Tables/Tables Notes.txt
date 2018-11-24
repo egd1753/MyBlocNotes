@@ -1,0 +1,46 @@
+Tables Notes
+
+
+Tables are great and extremely common way to display data/lists of anything with multiple attributes (i.e., list of users w addresses/names/numbers, etc.). They are everywhere: Excel Sheets, restaurant menus, etc.  
+Syntax will look something like:
+...
+<table>
+    <thead>
+	<tr>
+	   <th>blablablah</th>
+	   <th>moreblah</th>
+	   <th>lastlyblah</th>
+	</tr>
+     </thead>
+     <tbody>
+	<tr>
+	   <td>...</td>
+	   <td>...</td>
+	   <td>...</td>
+	</tr>
+     </tbody>
+</table>
+...
+
+What this means is:
+<table>
+	Declares/creates a table. 
+
+<thead>
+	Declares table header/header cells, which is most important part of a table. Header cells label each column, specifying what the underneath data represents.  
+
+<tr>
+	Declares a new table row
+
+<th>
+	Adds header cells. We nest them inside the <tr> that's nested inside the <thead>, which allows us to label each column.
+
+<tbody>
+	Where the bulk of the content is gonna go (kinda like <body> for the <html> element). We will need to declare each new row within the <tbody> with <tr>.
+
+<td>
+	The first time we used <th>, but since we already have it all labeled now, we will use <td> (table data). This will add cells to the <tr> that it's nested in, and is where we enter the actual data that we are trying to describe in the table.  
+	
+
+
+ 

@@ -1,0 +1,71 @@
+Primitive Data Types Notes
+
+
+
+Primitive data types are the smallest building blocks we use to construct more complex stuff. 
+
+"Foo" is a meaningless word often used in coding to show general principles, also use "bar" and "baz"
+
+JavaScript is case sensative
+
+
+
+Data Types
+-string: a sequence of characters
+-number: values such as integers or floating-points (numbers containing a decimal point).
+-boolean: named after George Boole, represents either a True or False value
+All programming languages have primitive data types, but they can be expressed differently in each language. Ex.: In JS, a string is primitive data type, but in Java strings are made up of chars, and therefore is not a primitive data type (but a char is).
+
+String
+One of most used/useful data types for programming. A sequence of characters, create it by enclosing with single or double quotes. May contain numbers, punctuation, and can even be empty. Note: quotation, whether single or double, need to match within the same string (either use single or double for the same string). 	In a newer version of JS, can also use backticks `` This syntax is called a "template string", offers additional functionality. If you have a quotation in the string, prolly better to use double quotations. If need to include quoted text, prolly better to use single quotes for the string and double for the actual quote. Sometimes need to use both apostrophe and a quote, then can use the backslash \ to escape a quote character. Ex.: 'Then she said "this isn\'t a quote," even though it was a quote.';
+
+
+Properties/Methods
+-Properties: describe characteristic of an object
+-Methods: describe things an object can do
+In JS, primitive data type like `string` will also behave like object with prop and meth thanks to the language itself. 
+	Ex.: my first car= 2005 Honda Accord...make property=Honda, model property=Accord, year property=2005 (almost any adjective is a property). The methods are things like `driveForward`, `driveBackward`, `startEngine`, etc. (things the car can do....verbs). These actions often change properties of the object: executing `startEngine` method now means that property of `engineOperating` is now `True`.  
+	In JS, methods are called "functions" (they are the same thing: actions an object can do). JS has "pre-built" objects to use, one common one is "console" object. Calling the "log" method of console object means we can print any data type to console. 
+	Strings have many built-in properties, most common is "length". Access it by using dot notation (add a period followed by name of property to the string). Ex.: 'This is a string.'.length; (will tell you "17", cause all characters within string are counted including spaces/punctuation). 
+	Strings have many built-in methods, some are: charAt()   -which tells you which character is located at a certain position in a string. 
+
+indexOf()   -similar to charAt(), but instead of gibing index to find what character is, you give a string of desired character to find its index. If it can't find a given character, it returns "-1". 
+
+toLowerCase(), toUpperCase()	-since JS is case sensative, these are useful when need to compare strings for equality (by converting both strings to lowercase or uppercase).
+
+
+Numbers
+JS only uses one data type to represent numbers, regardless if they are integers or floating-point. Numbers don't need quotes like strings. Often necessary to convert strings to numbers and vice versa. 
+
+parseInt()
+parseFloat()	-these methods good for things like; you have a string representation of a number and need to convert it to the `number` data type (parseInt() ignores everything after decimal point).
+toString()	-converts a number to a string.
+
+
+
+Boolean
+	Most languages have a value which represents "nothing"; in JS we use "null". "null" is both a value and a data type, can use things like "false" 
+
+Undefined
+	In some ways similar to "null", "undefined" is a value that means "there is something, but hasn't yet been assigned a value". 
+
+typeof
+	Using the `typeof` operator, can check the data type of any data. Ex.: typeof 22   will return "number", typeof true   will return "boolean", etc. Note: using `typeof` on `null` will falsely return "object", a bug that's been around for years. 
+
+
+Extra Notes:
+
+Q: What exactly is an object?
+A: In real life, a car is an object. This object has properties like weight or color, and methods like start and stop. (properties: car.name = 'Fiat' car.model = 500		methods: car.start()  car.drive()  )
+All cars have the same properties, but the values of those properties can be different. All cars have same methods, but methods can be performed at different times. In JS, varibals are containers for data values. Objects are variables too, but objects can contain many values. Ex.: var car = {type:"Fiat", model:"500", color:"white"}; 
+	You can define/create a JS object like this:
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};  Note: spaces and line breaks arent that important. Basically, all those properties and their associated values help describe our object called "person". Also, we created these properties ourselves, and set values to them. 
+	What if we want to call them? We can do:
+objectName.propertyName		or we can also do:
+objectName["propertyName"]
+	OBJECTS DON'T HAVE INDEXES, THEY HAVE PROPERTIES
+
+-A property in JavaScript is basically the same thing as an attribute in HTML
+
+
+ 

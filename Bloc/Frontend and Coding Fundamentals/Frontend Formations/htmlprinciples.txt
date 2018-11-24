@@ -1,0 +1,68 @@
+What is HTML?
+HTML is the standard markup language for creating Web pages.
+HTML stands for Hyper Text Markup Language
+HTML describes the structure of Web pages using markup
+HTML elements are the building blocks of HTML pages
+HTML elements are represented by tags
+HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+Browsers do not display the HTML tags, but use them to render, or interpret, the content of the page
+The purpose of a web browser (Chrome, IE, Firefox, Safari) is to read HTML documents and display them.
+The browser does not display the HTML tags, but uses them to determine how to display the document:
+UTF-8 is the preferred encoding for HTML files
+
+HTML tags: 
+	are not case sensitive, but it's prolly a good idea to make them lower case using stricter document types like XHTML.  HTML tags come in two groups: Tags that describe the type of information that's inside of them, and tags that don't. Examples of semantic elements are: <form>, <table>, and <article>. Examples of non-semantic elements are: <div> and <span>.
+
+
+
+The <!DOCTYPE html> declaration defines this document to be HTML5
+
+The <html> element is the root element of an HTML page, it defines the whole document
+
+
+
+
+The HTML <head> Element
+The HTML <head> element has nothing to do with HTML headings. The <head> element is a container for metadata. HTML metadata is data about the HTML document. Metadata is not displayed. The <head> element is placed between the <html> tag and the <body> tag. Note: Metadata typically define the document title, character set, styles, links, scripts, and other meta information.
+The <head> element contains meta information about the document, is a container for all the head elements. The following elements can go inside the <head> element:
+<title> (specifies a title for the document, this element is required in an HTML document)
+<style>
+<base>
+<link>
+<meta>
+<script>
+<noscript>
+
+
+
+
+
+The next element is the <body>; the visible part of the HTML document is between <body> and </body>. After the opening <body>, we can put a <header> if we want (not to be confused with the <head> tag).
+	In HTML5, we can use the <header>, <section>, and <footer> tags to help us organize stuff in the <body>. Before HTML5, we had to use <div> tags and assign attributes.
+
+The link's destination is specified in the href attribute. 
+
+HTML Attributes
+All HTML elements can have attributes
+Attributes provide additional information about an element
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"
+There are around 150 attributes in HTML, but only some are used frequently. Different attributes belong to different elements
+
+Headings (<h1> to <h6>)
+Search engines use the headings to index the structure and content of your web pages. Users skim your pages by its headings. It is important to use headings to show the document structure. Note: Browsers automatically add some white space (a margin) before and after a heading. <h1> headings should be used for main headings, followed by <h2> headings, then the less important <h3>, and so on. Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
+HTML Horizontal Rules
+The <hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule. The <hr> element is used to separate content (or define a change) in an HTML page:
+
+The <pre> element defines preformatted text. Text that's put inside the <pre> tags display in a fixed-width font (usually Courier) and it preserves spaces and line breaks
+
+The <style> attribute lets you mess with color, font, and so on
+
+
+
+
+
+
+
+

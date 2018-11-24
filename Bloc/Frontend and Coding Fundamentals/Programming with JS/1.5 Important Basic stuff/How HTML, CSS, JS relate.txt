@@ -1,0 +1,26 @@
+Web Devs normally talk about 3 languages for creating web pages: HTML, CSS, and JavaScript. Try to keep these languages in separate files, with the HTML page linking to the CSS and JavaScript files. Each language forms a separate layer with a different purpose, and each layer builds on the previous one:
+
+<HTML>
+Content Layer (.html files)
+This is where the content of the page lives. The HTML gives page structure and adds semantics.
+
+{CSS}
+Presentation Layer (.css files)
+The CSS enhances the HTML page with rules that state how the HTML content should look
+
+JavaScript()
+Behavior Layer (.js files)
+This layer is where we can change how the page behaves. We want as much of our JS as possible in separate files from the previous layers. 
+
+These layers form basis of progressive enhancement, which is becoming even more popular. It means that pages need to be able to be displayed on various devices, connection speeds, and still work even if user doesn't want the CSS or JS parts. 
+	The HTML needs to work on different kinds of devices, load quickly on slow connections, etc. The HTML + CSS need to be in separate files. With HTML + CSS + JS, the JS is added last and in separate files cause the page will still work even if user can't/won't display JS. Also, can reuse the same code on several pages, which makes sites load faster/more maintainable. 
+
+
+Linking JS file to an HTML page
+	First: To keep JS files organized, save them in a folder called something like "scripts", "javascript", or "js", the same way that we save and let CSS files "live" in a folder called "styles" or "css". 
+	 To link, use the HTML <script> element. The "src" attribute will say where the path to the JS file is stored. 
+	If we inspect the source code, we see that the HTML wasn't ammended, rather it will just show the link to the JS file. It is considered better to place most scripts you're adding to just before the closing </body> tag. We may come accross JS in the HTML <script> element, but as a rule of thumn it's better to put JS in it's own file. If we do put a JS in the HTML doc, we don't need the "src" attribute anymore.
+
+
+
+

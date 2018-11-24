@@ -1,0 +1,26 @@
+Version Control Checkpoint questions
+
+
+
+# Exercises
+
+> Why would you want to use version control for your code?
+
+A: Version control helps collaboration on projects, by allowing developers to work on sections and view changes and updates to the code without crashing the master code. 
+
+> Where can you find additional information about the Git commands available?
+
+A: The GitHub website has tons of resources, and a quick Google search should show websites like Stack Overflow offering more info. 
+
+> Why are branches useful?
+
+A: Branches are really helpful because they allow for devs to work on their own sections of the code, without messing up the original master code. Each section can be tested independently before being merged to the master code, or even branched off of a branch.  
+
+> What is the purpose of a remote?
+
+A: A remote is essentially a Dropbox for developers, but with far more control. I can back up my work from my local laptop to a remote, cloud-like server like GitHub, and then continue working on my home desktop. More importantly, giving developers access to the remote repository allows us all to work on a project, regardless of time zones or location. 
+
+> Why is it important to track changes to the upstream repository after you create your initial fork?
+
+A: There could be (and probably will be) many changes that will be made by the other devs working on our project, so if we don't track upstream changes, we could wind up doing work that is redundant, unnecessary, harmful, etc. 
+

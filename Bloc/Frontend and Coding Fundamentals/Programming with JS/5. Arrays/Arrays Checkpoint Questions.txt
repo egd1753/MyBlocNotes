@@ -1,0 +1,26 @@
+# Questions
+
+> Describe an array.
+
+A: In JS, an array is simply a list of items or elements to store, using `[]`. Arrays can contain any data type. 
+
+> In JavaScript can you have a single array with a string and a number in it?
+
+A: Yes, you can have most any data types, as long as proper syntax is used (strings in quotes, etc.). 
+
+> In JavaScript do arrays start at index 0 or index 1?
+
+A: Yes, JS is like many programming languages; in reference to an index, we start counting at 0.  
+
+
+# Code Practice
+
+```javascript
+
+var clothes = ['collared shirt', 'shirt'];
+
+clothes.push('pants');
+
+console.log(clothes);
+
+```

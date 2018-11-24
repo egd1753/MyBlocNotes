@@ -1,0 +1,24 @@
+# Questions
+
+> What are the three types of conditional statements?
+
+A: `if`, `else`, and `else if`
+
+> What are four types of comparison operators and how you would use them?
+
+A: equality operator `==` compares two values and returns `true` if they are evaluated as equivalent, inequality operator `!=` compares two values and returns `true` if they aren't equivalent, greater than operator `>` compares two numbers and returns `true` if left number is greater than right number, "AND" operator `&&` returns `true` if both operands are true
+
+#Code Practice
+
+```javascript
+
+let grade='B';
+
+if (grade == 'A' || grade == 'B' || grade == 'C' || grade == 'D') {
+console.log('Hurray! You passed!');
+} else if (grade == 'F') {
+console.log('Sorry, you failed')
+} else {console.log('Please enter a valid letter grade')}
+
+```
+

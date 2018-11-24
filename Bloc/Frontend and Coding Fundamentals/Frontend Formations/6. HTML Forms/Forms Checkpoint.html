@@ -1,0 +1,54 @@
+# Questions
+
+> What is a good use of the `<form>` tag, and what are its available methods?
+
+A: A form can be used to collect input from a user, and the `<form>` tag/element defines that form. The two available methods are "get" or "post". 
+
+> List and explain at least three different `<input>` types.
+
+A: (1) The Password `<input>`: defines a password field, and the characters in the field are masked. (2) The Text `<input>` is the default input type if unspecified, and defines a one-line text input field, such as a user entering their first name into the form. (3) Image defines an image as a submit button. (4) Button activates a JavaScript when it is clicked on.
+
+
+```html 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation Form</title>
+</head>
+<body>
+    <header>
+            <h1>Guest Reservation Form</h1>
+    </header>
+    <section>
+            <h3>Guest Information</h3>
+    </section>
+    <form action="https://ethandugashotels.com/reservation/add" method="post">
+        <input type="text" id="fname input" name="fname" required><br>
+        <label for="fname input">First Name</label>
+        <input type="text" id="lname input" name="lname" required><br>
+        <label for="lname input">Last Name</label>
+        <input type="email" id="email input" name="email" required><br>
+        <label for="email input">Email</label> 
+        <input type="tel" id="tel input" name="phone" required><br>
+        <label for="tel input">Phone Number</label>
+        <section>
+                <h3>Please Select a Time</h3>
+        </section>
+        <select name="tavailable">
+            <option value="Today"selected>Today</option>
+            <option value="Tomorrow">Tomorrow</option>
+            <option value="Every Day">Every Day</option>
+        </select>
+        <section>
+                <h3>Questions, Comments, Concerns?</h3>
+        </section>
+        <textarea cols="50" rows="4"></textarea><br>
+        <section>
+                <input type="submit" value="Submit!">    
+        </section>    
+    </form>
+</body>
+</html>
+
+```

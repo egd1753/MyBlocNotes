@@ -1,0 +1,2 @@
+What is React/why?
+	Modern frontend JS library, top choice for frontend library cause of its ease of use, flexibility in both web/native environments, and its relevancy for years to come. It doesn't matter which frontend tech you learn, they all solve the same problem, and it's easy to learn other libraries. 

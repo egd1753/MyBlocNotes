@@ -1,0 +1,54 @@
+internet- a global network of computers where each computer connects via a unique address, and communicates to others through a protocol. The main way we interact online is through World Wide Web of links/shared documents (resources). WWW was invented by English scientist Tim Berners-Lee in '89, with goal of allowing anyone to use internet's connectivity to share info.
+
+
+
+Components
+TCP/IP: Transmission Control Protocol/Internet Protocol, most widely used internet protocol. Protocol=a standard set of rules for doing something, thus TCP/IP is standard for transmitting data over networks.
+
+
+IP address: "Internet Protocol address". Every computer, server, printer, router, etc. on a TCP/IP network has a unique IP address. It's in the form nnn.nnn.nnn.nnn  (n=number from 0-255)
+
+
+Client: Apps like Chrome/other browsers that are connected to internet have the job of taking user interaction and translating them into requests for another computer. Every client computer has an IP address.
+
+
+Server: A machine connected to internet. Has own IP address, job is to store, process, and deliver web pages to clients. A server will wait for requests from other machines (like a client) and respond to it. Many types of servers, including: web servers, database servers, file servers, app servers
+
+
+ISP: Internet Service Providers are the middle men between clients and servers. They are often the "cable company". 
+
+
+Host: Any computer connected to a network that has unique address and offers resources to other computers on network. For www.google.com, host could be web server that serves pages for the site. 
+
+
+Domain Name: Easy-to-remember name for a website, consisting of top-level domain (like .com) and unique identifier (like google). Often has prefix (subdomain) attached to beginning (like "www" or "docs"). If associated with specific IP address then is also referred to as a hostname
+
+
+DNS: Domain Name System, a distributed database that keeps track of domain names and their IP addresses. When we type in "www.google.com", doesn't know where to look for it, so ISP will do a DNS lookup for the site you want. (Saves us having to type in IP addresses).
+
+
+Port Number: 16-bit integer identifying a port on a server that's associated with an Ip address. It allows network requests to get forwarded to correct process on server. 
+
+
+HTTP: Hyper-text Transfer Protocol, browsers and servers use it to communicate. HTTP adds "Secure" and means that connection between browser and server is encrypted. 
+
+
+URL: Uniform Resource Locator, identify a particular web resource and specify the protocol (Ex.: "https") followed by ://, a domain name, and possibly a path to a file name (like '/index.html).
+
+
+
+
+What Happens When Type in www.youtube.com?
+	This is a popular interview question (knowing how the different parts come together to make it work when you type www.google.com for ex.).  
+
+1. You first type in URL into browser
+2. Browser parses the URL into the protocol "https", the domain name, and the resource (in this case there's nothing after the last /, so just going to main page).
+3. Browser communicates with ISP, doing a DNS lookup
+4. When ISP receives IP address, it sends it to your browser
+5. Browser uses IP address it received and the given port number from URL to open a TCP socket connection. Web browser and web server are now connected. 
+6. Web browser send HTTP request to web server for the main HTML web page of youtube.com
+7. Web server receives request and looks for the HTML page. If page exists, web server prepares response and sends it back to browser. If server can't find requested page, sends back HTTP 404 error "Page Not Found".
+8. Browser received HTML page and scans it for assets like images, CSS files, JS files, etc.
+9. For each asset found, browser repeats entire process above, making additional HTTP requests to server for each resource.
+10. Once browser has finished loading all other assets, page will finally be loaded in browser window and connection closes
+  

@@ -1,0 +1,44 @@
+CSS Framework Notes
+
+
+
+
+
+
+3 most popular frameworks: Bootstrap, Foundation, Material Design
+
+Frameworks
+-It is a package of files having code to support dev. You don't have to start from scratch every time. 
+-Front-end or CSS framework has html, css, and js, usually have: typography style (icons, buttons, forms, modal windows), creation of standard CSS classes to style UI, CSS code to make grid, incombatibility solutions. 
+-Big value of CSS framework is creation of standard classes as pre-written CSS property values. Most contain grid system for web design. CSS framework saves time, makes consistent, enforce guidelines. 
+
+
+Bootstrap
+-Created in 2010 by Mark Otto and Jacob Thornton from twitter. It's the leading front end framework
+-Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.
+-If you don't want to download and host Bootstrap yourself, you can include it from a CDN (Content Delivery Network).
+
+
+Foundation
+-Foundation is an open-source project that is well-known for being mobile-first, smooth and responsive.
+-For web dev, email templates, and mobile/webb apps. Sites built on it: Disney, eBay, Facebook, National Geo
+-Like Bootstrap, Foundation has grid, but also optional is Flexbox
+
+
+Material Design
+-Google launched Material Design in June 2014. It is the de facto design engine behind many of Google's products used by millions of people around the world: Gmail, Google Docs, and Google Drive
+-Material Design comes with a set of design guidelines, over 900 material icons, and material components–modular and customizable UI components that are open-source, which allows you to plug into your next project with ease.
+-To get started with Material Components, go to this GitHub repo, and use the elements you need. In 2015, Google opened their design language to developers around the world in Material Design Lite.
+-Google recommends developers new to MDL to start with or reference their pre-built templates. These are ready-to-use website templates using MDL components, which you can use to get started quickly on your next project.
+
+
+Which one to use?
+-When you join an existing development team, there might be standard style guides and practices in place, so the expertise of individual members of your team will be a factor. Also, when choosing a framework, prioritize the following factors:
+-Ease of Use and Fit: First and foremost, the framework should be a fit for your project stylistically.
+-Popularity: The user base and contributor base are both worth considerations. How many people are using the framework? Whether you go with Bootstrap, Foundation, or Material Design, a larger user base indicates a thoroughly tested framework, as well as third-party support via templates and extensions.
+-Development and Maintenance: How frequent are new releases? Who is developing the framework? Frequent changes in the code, including regular bug fixes and acceptance of pull requests, indicates a robust ecosystem that makes the framework better.
+-Learnability and Documentation: How detailed and clear is the official documentation? Does it have code samples or templates that are helpful and easy to understand? The quickness with which you and your team members will be able to learn the framework can be a deciding factor.
+
+
+
+

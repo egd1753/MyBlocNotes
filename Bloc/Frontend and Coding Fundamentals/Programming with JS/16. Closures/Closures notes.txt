@@ -1,0 +1,40 @@
+-If variable is declared inside a function, it's a local variable. If declared outside a function, it's global. This is due to lexical scoping, which is a convention used with programming. 
+
+-Global variables exist throughout life of the app, while local variables are created when function is called and are destroyed when function finishes. 
+
+
+
+
+Closure
+We create a closure when inner function is accessible from outside its parent function. This can occur when an outer function returns an inner function. When this happens, the inner function retains a reference to the environment in which it was created. Therefore, it remembers all of the variables and values that were in scope at the time.
+	A closure is the combination of both a function and the environment in which it was declared. 
+	Closures are nothing but functions with preserved data. 
+
+
+
+
+
+Extra Notes:
+-Closure is putting a function inside of a function
+
+-Closure allows us to "maintain" info
+
+-We want to use closures in cases like: if we want to turn a global variable into a private (local) variable. While the outer (global) version of a variable might keep mutating, the private "inner" (local) variable becomes "decoupled" from the outer variable and is kept as it was when we captured it. 
+
+PRACTICE CODE TRYING TO USE CLOSURES, WON'T WORK
+var foo = function(age) {
+	var bar = 21;
+	var yearsTo21 = 0;
+	var legalSay = 'You are allowed to have an alcoholic beverage';
+	var illegalSay = 'You can have an alcoholic beverage in ' + yearsTo21 + ' more years';
+	function baz(age) {
+		if (age >= bar) {
+			return legalSay;
+		} else {
+			var underAgeBy = bar - age;
+			yearsTo21 += underAgeBy;
+			return illegalSay; 
+        }
+    }
+}
+

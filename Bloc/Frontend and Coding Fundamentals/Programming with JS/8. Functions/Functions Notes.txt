@@ -1,0 +1,100 @@
+Vocab.
+Function-
+
+Parameters- inputs that we can use in functions, behave like local variables inside {} (aka: variables that hold the values we pass into functions)
+
+Arguments- the values we pass to a function's parameters when we invoke the function
+
+Concantenate- to connect strings, characters, etc. into a list. (Ex.: ...("Hello " + name1 " and + name2)
+
+Anonymous function- an unnamed function expression
+
+ECMAScript- a standardized spec for JS
+
+Mutating Functions- alter existing object/data structure directly
+
+Non-mutating Functions- produce new object/data structure
+
+Callback Function- executes after another function finishes executing
+
+
+
+
+DRY-acronym for "don't repeat yourself", a principle in programming. Means that every piece of knowledge must have a single representation within a system...aka: code should be broken into components with a single responsibility. One way to do this is with functions.
+
+What is a Function?
+	They're blocks of code that complete an action. They're reusable, custom (defined by programmer). Three ways to define a function in JS:
+-function declaration
+-function expression
+-arrow function expression (new to ECMAscript6)
+
+
+Function Declaration
+	Begins with `function` keyword. Ex.: function foo() {}	after the declaration, we name the function (follow camelCase). Follow name with (), which are for optional parameters. {} contain code block. 
+	Info is stored in a function, but to call it we need to type the function:   name();		
+
+
+Parameters/Arguments
+	Parameters are inputs we can use in functions. They behave like local variables inside {}. If we want a function that greets a person by name, can write:
+function sayHello(name) {
+	console.log("Hello" + name);
+}
+This has a parameter called `name` for `sayHello` (you decide the name), and we use it as a local variable within the function. 
+	But wait, we haven't defined `name` anywhere, so how can we use it? Value is assigned when we call the function. 
+
+
+
+`return` Keyword
+	Sometimes we want to pass multiple values into a function, so we just add more parameters. (Note: we need to write the function in a way that spaces are included in certain "", otherwise when we call the fuction it would print out "Hello" and everyone's names all as one word). 
+	Rather than using a console.log, we could use a `return` keyword within a function. Note: console.log and return are not the same thing; console.log prints to the console and allows execution to continue, but return causes a function to cease execution and takes the value of the expression following it as the output. 
+	You can also use or store the value from the output of a function with `return` (refer to book).
+
+
+
+
+Function Expression
+	Another way to create a function. Syntactically it's similar to a declaration, but main dif is that we assign the function to a variable. Also, with function expressions, we don't need to name the function so we usually omit that (making it an "anonymous function"), which also helps make the function more concise. 
+
+
+
+Arrow Function Expression
+	ECMAScript is standardized spec for JS. ES6 and ES2015 refer to 6th version of JS (released in 2015). 
+	Arrow function expressions are new to ES6. They provide more concise way to define functions, and we represent them with equal sign followed by greater than sign, like this:	const salutatoins = (firstName, lastName) => {}	(aka: we replace `function` with `=>`, works the same as anonymous function expression, except syntax).
+	Syntax different: if only one parameter, don't need (). If there are no parameters, we need to add an empty set of (). If the function body only has a `return` statement, can make code even more concise by removing the {} and the `return` keyword (can't do this if the body has more than just a `return` statement). All three types of syntax return same output, you decide how to write it. 
+
+
+
+
+Mutating vs. Non-mutating Functions
+Mutating: alter existing object/data structure directly
+Non-mutating: produce a new object/data structure, often a changed version of input. 
+	Example of mutating array method in JS is .push() (adds an item to end of an array). Example of non-mutating array function in JS is .join(separator) method (joins all elements of an array into a string). The `separator` specifies a string used to separate each element of array. If a separator is omitted, array elements are separated with a comma. Join function doesn't change original array, so must assign the result to a variable.  
+
+
+
+Callback Functions
+	a function to be executed after another function finishes executing. Ex.:
+
+// Assigns a function to calculation. The function takes the price of two items and calculates
+let calculation = function(item1, item2, callback) {
+	return callback(item1, item2);
+};
+
+// We get the output of calling calculation, then assign it to sumTotal
+var sumTotal = calculation(100, 70, function(a, b) {
+	return a + b;
+});
+
+Callback= a function that is passed as an argument to other code. The code that receives the argument is expected to callback (or execute) the argument (function) once it's needed. 
+
+
+
+
+
+
+Extra Notes
+Function=piece of code that does one or more actions. Can call them as often as we want. They accept "arguments" and run commands, and return values. 
+
+Coding with arguments makes functions reusable (DRY)
+
+

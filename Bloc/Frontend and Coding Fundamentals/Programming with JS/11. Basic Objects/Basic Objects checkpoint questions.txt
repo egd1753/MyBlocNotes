@@ -1,0 +1,28 @@
+# Questions
+
+> In your own words, what is a JavaScript object?
+
+A: It is essentially the same as an object in the real world. An object is a noun, a "thing", and we can usually describe the characteristics of things using adjectives. In JS, an object IS the collection of all of those characteristics. 
+
+> What is a property of a JavaScript object?
+
+A: A property is a characteristic of an object. If we create an object named "car", it could have properties of "color", "year", "mileage", etc. 
+
+# Code Practice
+
+```javascript
+
+class Clothes {
+constructor(name, size, price) {
+this.name = name;
+this.size = size;
+this.price = price;
+}
+getName() {
+return this.name;
+}
+}
+ 
+shirts = new Clothes("V-Neck", "Medium", 20);
+
+```

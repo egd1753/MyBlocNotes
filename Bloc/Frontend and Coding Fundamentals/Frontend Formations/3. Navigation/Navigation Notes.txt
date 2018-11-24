@@ -1,0 +1,58 @@
+Navigation Notes
+
+
+
+
+Creating links is fundamental to webdev. 
+
+Anchor Tags/Hyperlinks/Links
+	<a href='http://www.bloc.io>Go to Bloc</a> is an example of an anchor/hyperlink tag. The tag starts with <a> and ends with its closing </a>. We add the href="" attribute to the opening tag, which tells where the browser navigates to when link is selected. The "Go to Bloc" part in between the opening/closing tags is the inner text, and gives us the text to click on (we can make this text what we want). 
+	If you want the link to send someone to a whole new website, can do that by making that site's URL to be the value of the href="" attribute. 
+	We can force links to open in new tabs when clicked. We do this by adding the target="" attribute and set the value to _blank. 
+	If our page has a lot of content and is really long, instead of making users scroll a lot we can create a link that links to content within that same page. 
+Ex.: let's say we have this section at the bottom of page:
+<section id="lastSection">
+	<p>beep boop beep</p>
+</section>
+
+At the top of the page, we can set a link that would look something like:
+<a href="#lastSection">Go to the last section</a>
+
+
+
+
+Lists
+	Two types are ordered <ol> (counts up from 1) and unordered <ul> (uses bullet points instead of numbers). Once we have declared our list, whether ordered or unordered, we then list each item using the child <li> element.  
+
+
+
+
+Creating Nav Structures
+	<nav> declares the creation of a set of navigation links. (Not all links are placed in here, but rather major blocks of navigation links that we want grouped together). We could then start writing each anchor/link, but if we want we could also create an unordered/ordered list and place the links inside of those, if we thought it was perty. The code block would look something like this:
+     <nav>
+        <ul>
+          <li><a href='/index.html'>Home</a></li>
+          <li><a href='/about.html'>About</a></li>
+          <li><a href='/contact.html'>Contact</a></li>
+        </ul>
+      </nav>
+
+  	
+
+
+
+Extra Notes:
+	
+	URL stands for Uniform Resource Locator (also just called web address). It can be composed of words (like w3schools.com), or an IP (Internet Protocol) address. Web browsers request pages from web servers by using a URL, which is used to address a document or data on the web. The syntax of a URL is:  scheme://prefix.doman:port/path/filename   The scheme=type of internet service (most common is http or https), prefix= defines a domain prefix (default for http is www), domain= internet domain name (like w3schools.com), port= port number at the host (default for http is 80), path= defines path at the server (if omitted: the root directory of the site), filename= the name of a document/resource
+
+href attribute:
+	Syntax is <a href="URL">   it only has a value of "URL". This URL value can come in different forms. 
+	*Absolute URL- points to another website (like href="http://www.example.com/default.htm")
+	*A relative URL - points to a file within a web site (like href="default.htm")
+	*It can link to an element with a specified id within the page (like href="#top")
+	*Other protocols (like https://, ftp://, mailto:, file:, etc..)
+	*A script (like href="javascript:alert('Hello');")
+
+
+
+	

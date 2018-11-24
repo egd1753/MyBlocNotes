@@ -1,0 +1,23 @@
+Questions for mentor
+
+
+Q: Do CSS declarations need to be in a certain order?
+A:
+
+Q: When should I use <aside>, <section>, <div>, <main>, <article>, etc.?
+A: <aside>-designates secondary content or content that is aside from the main section. The HTML <section> element represents sections of the document, typically similar content that is grouped together. <div> divides areas on a webpage. The HTML <main> element represents the main content of the <body> of a document.
+
+Q: What's the difference/when to use: href, ref, src
+A:
+
+Q: Linking different pages of the same website together: how do you go about titling (what's the syntax) each page, and where do you save those pages so that all the links actually work when you click on them?
+A:
+
+Q: File trees/organization?
+A:
+
+Q: Frustration about getting stuck on CSS project for 2-3 days-should I just move on to the next checkpoint?
+
+Q: I try not to get bugged down in details, but sometimes on a Quiz there will be a very specific question that wasn't discussed in a chapter, and wasn't in a project.
+
+Q: CSS Frameworks: Question 1, can't figure out how to search in source code and find what framework websites are built on. 

@@ -1,0 +1,30 @@
+# Questions
+
+> What type of variable name casing do you use in JavaScript? (think of snakes or camels)
+
+A: camelCase, where the first letter of the first word is lowercase, and all successive words in the name are uppercase
+
+> If you want to create a variable called `mentor` and set its value equal to the name of your mentor, how would you do that?
+
+A: `var mentor='Jacob Martens'`
+
+> How would you then log the value of mentor to the console?
+
+A: `function mentor(name) {
+console.log('Jacob Martens')
+}`
+
+> Describe the difference between let, var, and const.
+
+A: `var` is used to declare a new variable, scoped to the entire function. `const` is used to declare a variable that we won't reassign a value to (we want the value of the variable to be "constant"). `let` is used to declare a variable that can be reassigned later; however, unlike `var`, `let` used with `{}` allows us to scope a variable to a specified block of code. 
+
+# Code Practice
+
+```javascript
+
+const myName='Ethan Dugas';
+var hairColor='Brown';
+let homeState='Louisiana';
+
+```
+

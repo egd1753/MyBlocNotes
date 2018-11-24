@@ -1,0 +1,94 @@
+Intro to Git/GitHub
+
+
+
+
+Vocabulary:
+repository: a location where software is stored. A repository, or Git project, has the whole collection of files/folders associated with a project. 
+
+Git: type of version control system. 
+
+GitHub: a Git hosting (aka central) repository, with tools for shipping better code using command line, issues, pull requests, code review, etc. 
+
+A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together. As the project evolves, teams can run tests, fix bugs, and contribute new code with the confidence that any version can be recovered at any time.
+	Git is an example of a distributed version control system (DVCS) commonly used for open source and commercial software development. DVCSs allow full access to every file, branch, and iteration of a project, and allows every user access to a full and self-contained history of all changes. Unlike once popular centralized version control systems, DVCSs like Git don’t need a constant connection to a central repository. Developers can work anywhere and collaborate asynchronously from any time zone. Without version control, team members are subject to redundant tasks, slower timelines, and multiple copies of a single project.
+	More than 70 percent of developers use Git, making it the most-used VCS in the world. Benefits for teams/businesses: Devs can see entire timeline of changes, can work in every time zone, can break down communication barriers within dev teams. 
+
+
+
+
+Using Git in bash
+git init	-tells Git to start tracking the directory
+git status	-check status of changes to repository
+git diff	-view changes to files
+git add <FILENAME>	-add a file's changed to be commited
+git add .	-add all files changes
+git commit -m "your commit message"	-commit (aka "save) the changes you've added, with a short message describing those changes
+git config --global user.username "usernamehere"	-add GitHub username to Git configuration
+git config --global user.username	-check what username is set in Git config
+git remote add origin <URLfromgithub>	-linking remote repository
+git push -u origin master	-add the "master" branch to the "origin" remote repo
+git pull <remotename> <branchname>	-pull in changes
+git push <remotename> <branch>		-push changes
+git clone <URLfromgith>		-clones a fork to your local machine
+git remote -v		-view remote addresses
+git remote add upstream <URLoforiginalrepo>	-allows you to pull changes from the original repo and add those to your fork/clone
+git branch add-<username?branchname?>	-creates a branch?
+git checkout <branchname>	-go into that branch
+git commit -m "commit message"		-?
+
+
+Using Remote Repository
+Go to github.com, click +, click new repository. Name it the same as local repository name and create. Now have empty repo on github, at top will see "quick setup", make sure "HTTPS" button is selected and copy address, this is the address of the repo on github's servers. Go back to terminal and type	git remote add origin <URLfromgithub>	this tells the local repo where the remote repo is, so they can sync. 
+	Note: can have multiple remotes, so each one requires a name; primary remote is usually named "origin". On Windows, GitHub Desktop will automatically create a remote named "origin" in local repo, so just need to tell it what URL to associate with "origin". Would use this command instead:	git remote set-url origin <URLfromgithub>
+	Push work to remote: when you push or pull from a project, you tell Git the branch name you want and the name of the remote that it lives on. Ex.: git push origin master	-will send branch named "master" to remote repp named "origin". (Note: the github website said to use "git push -u origin master", and it wouldn't run properly because I didn't realize a window had popped up for me to sign into github)
+
+
+
+Forks
+Creating a copy of a repository on your Github account. A forked copy begins as a remote repo, existing in GitHub account. To get a forked repo from your GitHub account to computer, must clone it. So, you: find someone else's rep, you fork it, then you clone the fork to your local computer. You use your own terminal to talk to both repos on the GH servers. You can then push and pull from local computer to your remote repo, and even pull new changes from "upstream" (the original)
+
+
+Branches
+When working in groups, common to use branches. You can create a branch off of the master (which stays stable), and work on your branch. Once your work is done you can merge it back to the master branch. You can even branch off a branch.
+	GH automatically will serve/host static website files in branches named "gh-pages", a free service called GitHub Pages. All repos that have a "gh-pages" branch with website files can be found, live online, using this format: http://githubusername.github.io/repositoryname 
+
+
+Pulls
+When you make changes/improvements to a project you've forked, you'll want to send those changes to the maintainer of the original and request that they pull those changes into the original so that everyone can benefit from the updates—that's a pull request.
+	Visit the original repo on GH. Often GH will detect if you pushed a branch to a fork, and display it at the top of the original's website. 
+
+
+Merge
+When you've successfully pushed a contribution, you can delete an unneeded branch locally/remotely. Since my branch was merged with "gh-pages" branch of original, I can merge my branch locally too. 
+
+
+
+	
+
+
+
+Extra Notes:
+-Bloc article on Git workflow:  https://www.bloc.io/resources/git-checkpoint-workflow#before-each-checkpoint
+
+-Create a repository:
+	-Open terminal
+	-Create a new directory 
+	-Go into folder 
+	-Initialize (start tracking) the folder	
+
+-Commit (save) stuff in repository:
+	-Create/save a file in that folder (repository)
+	-Check status of that repository
+	-Add recently created file 
+	-Commit (save) the changes (created/added file)
+
+-Syncing with GitHub:
+	-Make sure GitHub username info is configured w Git
+	-Create a new remote repository on GitHub
+	-Connect local repo to remote repo (git remote add origin <URL> )
+	-Push work to remote (git push -u origin master)
+
+
+
+

@@ -1,0 +1,27 @@
+ for(var i = 0; i < 10; i++){
+    if(i % 2 === 0){
+      console.log("Hello");
+    } else if(i % 3 === 0) {
+      console.log("World");
+    } else if(i % 2 === 0 && i % 3 === 0) {
+      console.log("Hello World");
+    } else {
+      console.log(i);
+    }
+  }
+Using the code above, how many times will the exact phrase "Hello World" be printed to the console?
+3 times (incorrect)
+0 times (correct)
+
+
+
+
+var x = 'outside';
+function logToConsole() {
+  console.log(x);
+  var x = 'inside';
+}
+logToConsole();
+What will the code above output?
+null (incorrect)
+undefined (correct)

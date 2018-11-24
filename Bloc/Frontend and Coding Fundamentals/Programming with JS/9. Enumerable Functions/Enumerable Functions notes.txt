@@ -1,0 +1,34 @@
+Instead of using for loops for looping over an array, we'll look at map(), filter(), and reduce() to iterate over an array
+
+
+
+
+
+map() Function
+	This function iterates over each item in the array, transforms it, and returns a new array (doesn't modify original array, so it's non-mutating). Ex.:
+
+var array = [10, 20, 30];
+var timesThree = array.map(item => item * 3);
+In this example: we loop through the array, and multiply each item in the array by 3. Making this the value of the variable "var timesThree", we are storing those results (function expression). 
+
+
+
+
+filter() Function
+	This function iterates over each item in an array, keeps items when condition is "true". Just like the map() function, this doesn't alter array, but it returns the filtered value as a new array stored in the variable "lessThan25".
+	Syntax is: array.filter(function(currentValue, index, arr), thisValue)	In this example syntax, array.filter() has two parameters. The first parameter, function(), is required, as the filter() function needs this parameter/function to tell it what to do to each item in the array. The function() parameter can have the three arguments: currentValue, index, arr	but only currentValue is required. index, arr, and the other parameter of filter() thisValue are optional. 
+
+
+
+reduce() Function
+	The reduce() function returns an array of values as a single value. Its callback function is usually passed two arguments: the first is the accumulating total and the second is the current value in the array for each iteration.
+
+
+
+Chaining map(), filter(), and reduce()
+	When we need to perform multiple functions to an array we can chain the functions  map(), filter() and reduce() into a single operation.
+
+
+
+
+Extra Notes:

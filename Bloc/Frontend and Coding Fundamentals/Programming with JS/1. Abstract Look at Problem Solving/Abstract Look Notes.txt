@@ -1,0 +1,30 @@
+An Abstract Look at Problem Solving Notes
+
+
+
+
+Being a good dev means looking at a large probem and breaking it into smaller pieces, then tackling each smaller piece. 
+
+Vocab:
+-Syntax: keywords/symbols that make up a programming language. 
+-Linear: something that progresses sequentiallly.
+-Roadmap: map designed to show step-by-step how a program works
+
+One of the hardest parts of dev is learning to think like a programmer (breaking down big tasks into smaller ones). Anyone can learn/refine with practice, and is one of most important skills. 
+	Ex.: we want to build a factory that manufactures/ships a product. What smaller steps make up that big one? Think in terms of an assembly line:
+-Creation Station: the place where product is created
+-Paint Station: where it's painted
+-Packaging Station: where painted product is packaged for shipping
+-Loading Station: where packaged product is loaded onto trucks/shipped
+Now imagine all stations connected by a conveyer belt, making the system a linear one. This is programming. 
+
+
+Roadmap
+	After breaking down the steps, we create a roadmap by plotting the smaller tasks in a linear progression (can literally just draw arrows flowing from each station to the next). Roadmaps are useful cause we can visualize the steps in the task, and give a clearer picture of potential gaps before even starting. 
+	Ex.: one day Load Station notices there are no products arriving and informs me (the manager). How to solve the problem? One way is process of elemination. We can start at the Loading Station and keep looking back until we find wehere the product stops moving. In programming, the computer does exactly what we tell it to, in a predictable way. Therefore, if there's a problem, it's probably an human error in thought process, used wrong command, etc. 
+	What if customer wanted a different paint job? We could have multiple paint stations, and draw a roadmap to reflect that. (basically after the Creation Station, there are 3 different paint stations products can be routed to depending on the desired color, and all 3 stations will then convey painted products to the same Package Station). 
+	
+
+
+
+

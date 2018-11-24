@@ -1,0 +1,67 @@
+What is DOM?
+	stands for Document Object Model, means that browser evaluates entire HTML doc as a single JS object. This object gets special methods added, to help find each element/element groups. DOM is just the JS representation of all HTML tags on a page. Browsers use HTML markup to create a model of the page, and each element creates its own node (a kind of object).
+	The overall structure of the model resembles a family tree. 
+
+Document Object
+	This is at the top of every page in the tree model. The current web page loaded into each window is modelled using a document object. We can think of each page on a website as being a separate document.
+	Beneath the document object, each box is called a node. Each node is another object. 
+
+Window Object
+	A browser represents each window or tab using the "window" object. Location property of the window object tells you current URL of the page
+
+
+
+
+
+
+
+
+Querying the DOM
+	DOM is a single object (the entire page) that has nested objects within it (each HTML element). 
+Old School: 
+getElementByID()   -document.getElementByID() will return first element it finds matching the id argument. Since every site can only have one unique id per element on the page, can only search one at a time. 
+
+GetElementsByClassName()    -works similar to ^, but two differences. With this one, we can search more than one item ("Elements") by searching the class. Will return an array. 
+
+getElementsByTagName()    -works exactly the same as ^, except that it expects a tag name instead of class name. 
+
+New School:
+Help you find stuff just like old school, but less complicated. They follow CSS conventions.
+document.querySelector()   -finds element by id. Pass '#id' in as the argument
+
+document.querySelectorAll()    -finds array of elements by tag name or class name. Pass in the class or tag just like with CSS selectors ex.: document.querySelectorAll('.className') or document.querySelectorAll('tagName')
+
+Old School is more common in web dev. 
+
+
+
+Editing Attributes
+	Once select an element and store as variable, can change attributes just like you would change values in a JS object. There is a long list of attributes that can change on element, but common ones are:
+onClick, onChange, parentElement, children, style
+
+
+
+Creating/Adding Elements to the DOM
+	May need to do more than edit an HTML element, may need to create new elements. 
+document.createElement   -creates a new element
+2 steps: we create an element (which will be floating around in limbo), and then push it into the HTML where we want it. When we create it, we declare the variable, create a variable name, and use document.createElement(); and within the (), we add "nameoftag" to be used as an argument
+
+
+
+Extra Notes:
+-DOM allows us to: add content to HTML doc, delete content, and change content
+
+-Components of DOM: 
+document: the HTML document we're working on
+object: every HTML element in the doc is an object
+model: describes how objects are laid out in a tree 
+nodes: everything we can change in an HTML doc (the objects, elements, tags, text within those, attributes, etc.)
+
+-traversing the DOM
+We calling methods on the "document" object, which is basically the root element. 
+
+-We don't need to begin every DOM thing with "document." instead of querying the DOM like:    document.getElementById();	we could be more specific, like this: variableName.getElementsByTagName()[];  where within the () we put the name of the HTML tag we want to grab, and could put our index number in the [] to select the first, second, third, etc. property for that object (like selecting an array), and the "variableName" part is the parent element that we assigned to a variable.
+
+
+
+

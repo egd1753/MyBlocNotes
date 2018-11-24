@@ -1,0 +1,65 @@
+# Questions
+
+> Why do we use CSS?
+
+A: CSS makes it a lot easier to style the page (rather than just using HTML), the browser can load pages quicker, site maintenance is easier.
+
+> What is the proper CSS selector for a class?
+
+A: The syntax looks like: 
+`.thisisaclass {}`
+
+> What is the proper CSS selector for an id?
+
+A: The syntax looks like:
+`#thisisanid {}`
+
+> What CSS property would you use to center text?
+
+A: `Text-align`
+
+> What are the four options when setting padding or margin in CSS padding: 20px 20px 20px 20px;?
+
+A: Padding is a shorthand property for the individual properties of padding-top, -right, -bottom, -left (values displayed in that order). Padding properties can have values of: length (expressed in px, pt, cm, etc.), % (specifies padding in % of width of containing element), and inherit (specifies that padding will be inherited from parent element)
+
+> What is the box model?
+
+A: The box model is a method used to style CSS/HTML, and consists of: margins (outermost edges), then border, then padding, and lastly content.  
+
+
+# Code Practice
+
+```html
+
+<!DOCTYPE hml>
+<html>
+    <head>
+        <title>Thisisabutton</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="button">
+            Save
+        </div>
+    </body>
+</html>
+
+```
+
+```css
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+.button {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    color: red;
+    padding: 20px;
+    border: 2px dotted rgb(0,0,0);
+    border-radius: 20px;
+    background: #0000ff;
+    width: 200px
+}
+
+```
+

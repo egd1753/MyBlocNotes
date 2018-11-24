@@ -1,0 +1,13 @@
+# Questions
+
+> What is the tag you would use to add an image to a webpage?
+
+A: The tag is `<img>`, and since it is a void element, there's no closing tag. 
+
+> In your own words, explain what the `alt` attribute is and why it is important.
+
+A: The `alt` attribute is text that is displayed if the image fails to properly load. This is important for several reasons, like making the user aware that the image failed to load, and is also important for SEO (especially Google's).
+
+> Describe the similarity and differences between the `<video>` and `<audio>` tags.
+
+A: Both tags are used to enter media into a page, they follow the normal opening/closing syntax, both have 3 supported formats in HTML5, use the nested <source> element in the same way, and they both share almost the same attributes, like: `controls`, `src`, and `type`. They are different in that the only shared format is Ogg, and the <audio> tag doesn't need the `width` and `height` attributes like <video> requires    

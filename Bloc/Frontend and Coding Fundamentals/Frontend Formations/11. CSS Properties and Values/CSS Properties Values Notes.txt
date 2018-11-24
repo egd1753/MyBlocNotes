@@ -1,0 +1,127 @@
+CSS Properties and Values Notes
+
+
+Property
+	Tells the browser what you want to do with the selected HTML element. To change background, use background property.
+
+Value of Property
+	Each property has associated values with them. For the background example, can use color as the property value. Can use hex (#3f51b5), RGB (63, 75, 181), HSLa (170, 50%, 45%, 1), or the actual color (blue). 
+
+
+How to style HTML
+	Need to choose selector of the HTML element to style, then pick CSS properties/values. Ex.:
+body {
+	background: blue;
+}
+
+This is the basic syntax of CSS. There are over 350 CSS3/CSS properties, CSS3 is the new standard, has many improvements. No need to memorize all properties, no one expects you to (one of those things you just Google on the regular).
+
+
+
+
+Common Properties
+
+Save Button
+	Will look/feel like an actual button, will use these properties:
+color
+background
+width
+text-align
+padding
+border
+border-radius
+fonts-face
+
+Below is example of basic HTML page with <div> that's styled as button. 
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" ref="index.css">
+  </head>
+  <body>
+     <div class="button">
+         Save
+     </div>
+  </body>
+</html>
+
+We then style in CSS, beginning with selecting the button class:
+
+.button {
+}
+
+We can then add color, which will change the "Save" text to color we choose. We can use value "blue", or hex, or RGB codes.
+
+.button {
+	color: blue;
+}
+
+Then add background (we'll choose hex color #ff9800).
+
+.button {
+	color: blue;
+	background: #ff9800;
+}
+
+Then we'll add width, text-align (to center the "Save" inside the button), and padding (adds space between letters and outer edges) declarations. 
+
+.button {
+	color: blue;
+	background: #ff9800;
+	width: 200px;
+	text-align: center;
+	padding: 20px;
+}
+
+*Note: the full padding declaration is padding: 20px 20px 20px 20px;  These stand for top right bottom left respectively, and since they're all the same we can condense it down to just padding: 20px;
+
+We will then add a border property by adding border: 2px solid rgb(0,0,0);  The "2px" part tells us the thickness, the "solid" tells us it's a solid color, and the last value is the color in the RGB format.
+
+Then we'll add a radius to the border to make it look more buttony. We will use border-radius: 20px;
+
+Lastly, we'll change the font. The property will be "font-family", and will use custom fonts from Google Fonts (an online site that makes different fonts available through internet). The final button code will look like this:
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+    .button {
+        color: blue;
+        background: #ff9800;
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        border: 2px solid rgb(0,0,0);
+        border-radius: 20px;
+        font-family: 'Indie Flower', cursive;
+    }
+
+
+Extra Notes:
+
+A: Padding is a shorthand property for the individual properties of padding-top, -right, -bottom, -left (values displayed in that order). Padding properties can have values of: length (expressed in px, pt, cm, etc.), % (specifies padding in % of width of containing element), and inherit (specifies that padding will be inherited from parent element)
+
+Box Model:
+	All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout. The CSS box model basically is a box that wraps around every html element, consists of: margins (outermost edges), borders (more inward), padding (even more inward), and the actual content. A picture of the box model looks like a square Russian egg-nesting doll. 
+
+The width of an element does not include padding, borders, or margins!
+
+Note: The min-width and max-width properties override the width property.
+
+Border-radius allows you to add rounded corners to elements.
+
+To import Google Fonts into a CSS document:
+	One method to use API: Place "@import" at the very first line in the CSS file. Then, use url(`...`); syntax to add in the url for google's font API, and at the ..."family=", put the name of the font in "Style+Name+E
+https://fonts.googleapis.com/css?family=Font+Name
+
+Does CSS require properties (for the button exercise for example) to be ordered a certain way in order to work?
+
+Make every letter in a word capitalized: text-transform: uppercase;
+
+Text-transform: capitalize; (capitalizes first letter of each word)
+
+
+
+
+	
+	

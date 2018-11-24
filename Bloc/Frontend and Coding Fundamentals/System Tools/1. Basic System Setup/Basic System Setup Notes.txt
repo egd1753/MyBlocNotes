@@ -1,0 +1,26 @@
+Basic System Setup Notes
+
+
+
+Operating System (OS)
+This is the software that manages computer hardware and software resources and provides common services for computer programs. Common operating systems include macOS, Windows, and Linux-based Ubuntu.
+
+Web browser
+An application or program for viewing web content such as websites, games, images, and more. Common browsers are Safari, Chrome, Internet Explorer and Edge.
+
+Text editor
+A tool for creating and editing plain text files. Common text editors are VS Code, Atom, Notepad++ and WebStorm.
+
+Terminal
+A text-based application where you input commands to interact with other programs and perform tasks.
+
+
+
+
+
+Checkpoint Questions:
+#Exercises
+
+> What did you learn in this checkpoint? Did you encounter any issues getting your browser, text editor, or terminal installed? If so, what steps did you take to solve them? Submit this checkpoint with the answers.
+
+A: I learned that Atom is Bloc's preferred editor (I've been using VS Code). I also learned Window's Command Prompt isn't the kind of terminal I need. While installing Bash, I encountered some detailed setup options that weren't discussed in this chapter, so I went with the defaults or what was closest to Bloc's suggestions. I had most of the other applications installed already, and I own both a Mac and Windows computers (and also have experimented with the Linux distribution Tails installed on a live USB), so this checkpoint was fairly straightforward.     

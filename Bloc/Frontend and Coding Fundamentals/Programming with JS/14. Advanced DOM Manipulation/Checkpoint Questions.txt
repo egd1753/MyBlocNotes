@@ -1,0 +1,27 @@
+# Questions
+
+> What is the difference between `document.querySelector()` and `document.querySelectorAll()?`
+
+A: `document.querySelector()` returns only the first element it finds that matches the query, and `document.querySelectorAll()` returns an array-like list of all matches.
+
+> What is the difference between `getElement(s)By` and `querySelector(All)`?
+
+A: Both kinds functions are used to query the DOM, but the `querySelectorAll` allows us to pass multiple arguments that need not be `class` arguments, while `getElement(s)By` functions either only allow one argument, or only allow multiple `class` arguments (as with `getElementsByClassName()`)
+
+> What do JavaScript event handlers do and what is an example of one?
+
+A: They are functions that "handle" what happens after certain events. An example is if an event is triggered by a user clicking a button, in which case we'd use the "onclick" event handler. 
+
+# Code Practice
+
+```javascript
+
+let list = document.getElementById('list');
+let shirts = list.getElementsByTagName('li');
+for(let i = 0; i < shirts.length; i++) {
+    shirts[i].onclick = () => {
+    console.log(shirts[i].innerText + ' Clicked!');
+}
+}
+
+```

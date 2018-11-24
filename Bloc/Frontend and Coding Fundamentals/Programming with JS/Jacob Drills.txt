@@ -1,0 +1,15 @@
+Simpler Questions
+
+First: 
+
+function mexicanFood(paramOne) {
+  let newArray = [];
+  for(let i = 0; i < paramOne.length; i++) {
+  newArray.push(paramOne[i].name);
+}
+return newArray;
+}
+
+
+Second:
+

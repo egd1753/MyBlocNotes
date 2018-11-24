@@ -1,0 +1,38 @@
+# Questions
+
+> What does "lexical scope" mean in JavaScript?
+
+A: It means that functions have access to global variables, and have access to local variables within their own code block (child functions nested within a parent function have access to parent function variables, but parent functions don't have access to child function variables).  
+
+> What is an advantage of a programming language that uses lexical scoping?
+
+A: Lexical scoping helps keep variables reference-able from within their own block of code... which means if we declare a variable within a block of code, then accidentally declare a variable with the same name but outside that code block, we shouldn't have to worry as much about the code breaking.   
+
+> What is a closure?
+
+A: Closure is a function AND its environment, written in such a way that an inner function can be accessible from outside the parent function. 
+
+> What would be a use case of a closure?
+
+A: We can use closure to select a global variable and make it local for a particular function, which can be useful for things like: creating a counter that tracks how many times a button is clicked.  
+
+# Code Practice
+
+```javascript
+
+var number = 6;
+var divide = function() {
+	
+	var firstParam = 2;
+	
+	function printQuotient() {
+				console.log(number / firstParam);
+    
+	}
+	
+	return printQuotient;
+
+}
+var toPrint = divide();
+
+```

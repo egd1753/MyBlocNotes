@@ -1,0 +1,43 @@
+JS is object-based paradigm
+
+Object=a collection of properties
+
+Property=an association between a name (or key) and a value
+
+Object literal syntax:
+var student = {
+	name: "Jen",
+	age: 25
+};
+
+
+Using "new" keyword
+var student = new Object();
+	student.name = "Jen";
+	student.age = 25;
+(notice how object literal uses commas to end a property, and "new" Object method uses semi-colon) We can either use dot syntax or bracket syntax. 
+
+Dot syntax:
+student.name = 'Jen';
+
+Bracket syntax:
+student['possessions'] = ['bicycle', 'clothes', 'laptop'];
+
+Can also retrieve value of an object property using either dot or bracket syntax
+
+
+
+Functions as property values
+	If an object's property's value is a function, we refer to that property as a method. 
+
+
+ES6 Class Invocation
+	Classes are a new feature to ES6 (ES2015). Classes are "special functions" built around the "class" and "constructor" keywords. Classes allow us to build objects from a general design.
+
+
+
+for...in Loop and Enumeration of Object Properties	
+	We can iterate through the properties of an object using the "for"..."in" syntax. Ex.:
+for (/*each property*/ in /*object*/) {
+	//code block
+} 

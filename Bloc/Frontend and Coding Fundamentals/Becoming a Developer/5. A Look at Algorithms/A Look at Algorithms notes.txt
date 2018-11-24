@@ -1,0 +1,61 @@
+When creating program, have to tell computer exactly what to do. When telling it what to do, have to decide how it's going to do it. That's where algorithms come into play. 
+
+Algorithm: a step by step process to achieve an outcome. For almost any problem, there can be tons of different algorithms that could solve it, some are better suited to that problem than others. 
+
+Need to know some sorting/searching algos, cause many problems that involve sorting are tweaks on well-known algos. 
+
+
+
+Sorting
+	Sorting is useful cause we often need to sort through lots of data by some attribute. Visualize algos: https://visualgo.net/en/sorting?slide=1
+
+Bubble Sort
+	It starts at beginning of array and will swap the first two elements if the first is greater than the second. Then move to next pair (second/third elements) and do the same thing. The smaller items "bubble" to the beginning of the array. We keep iterating until it's all sorted. 
+
+Selection Sort
+	Start with first element, scan entire array, find smallest element. Then swap it with the front element. Then starting with the second element, we find the next smallest and move it. Continue until all elements are sorted. 
+	
+Merge Sort
+	Divides array in half, sorts each of those halves, and then merges them back together. Sort halves by applying the same sorting to them; aka: each half is then divided into halves, until we are comparing two single elements, then we swap accordingly, and "merge" back into the array. 
+
+Quicksort
+	A bit more complicated, but powerful. First choose an element from the array then compare every other element in the array to it (we call this a "pivot"). Then place all elements that are greater than pivot into a subgroup, and all the elements that are smaller into another subgroup. Then choose a subgroup and repeat the process. Eventually, will finish dividing each subgroup until it contains only one item, at which point items will be sorted. 
+
+Radix Sort
+	Is for sorting integers. We iterate through each digit of each number, grouping numbers by digit values. Ex.: have an array of integers, we first sort the first digit, the most significant digit, of each element to group the zeros. Then sort each grouping by next digit. Repeat by each subsequent digit until whole array is sorted.
+
+
+
+Searching
+	Computers search through data a lot. Ex.: Google search has an algo, as does file system in computer. 
+
+Linear Search
+	Checks an entire list/array until it reaches the desired element. Algo works by checking if first item in array is item you are searching for. If yes, nothing more to do. If not, algo checks next item until target is found. This can be inefficient if the stuff you need is at the end of a list.
+
+Binary Search
+	More efficient search. Can only use binary search on a sorted array, so must use sorting algo first. In Binary Search, we look at element in center of array and compare it to the desired element. If this is what we're looking for, algo is finished. If not, if element is larger than the item we are searching for, we can ignore all items in the array that are greater than that item. Since array is sorted smallest to largest, means we can ignore the elements to the right of the center element. If element is smaller than item we're searching for, than we can ignore all elements to the left of center element. Repeat process on remaining half of list, checking middle of list and choosing one of the halves until we reach target. 
+
+
+
+Extra Notes:
+-example of a BubbleSort in JS:
+function bubbleSortAlgo(a) {
+	var swapp;
+	var n = a.length - 1;
+	var x = a;
+	do {
+		swapp = false;
+		for (let i = 0; i < n; i++) {
+			if (x[i] < x[i + 1]) {
+				let temp = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = temp;
+				swapp = true;
+            }
+        }
+		n--;
+    } while (swapp);
+	return x;
+}
+undefined
+bubbleSortAlgo([1, 5, 2, 30, 15, 14, 3]);

@@ -1,0 +1,14 @@
+# Questions
+
+> List at least three sites you frequent that use each CSS framework: Bootstrap, Foundation, and Material Design.
+
+A: Bootstrap is the most popular front-end framework, used by sites like Bloc.io, and Twitter. Foundation by ZURB is used in Facebook, Ebay, and Yahoo! Material Design is used for a lot of Google's products, including Gmail, Youtube, Google Maps, and even the Chrome browser and Chrome OS.   
+
+> Read the official documentation and analyze the three leading CSS frameworks in this checkpoint. Why are some used in specific projects over others? What are the deciding factors? Is it aesthetics, development team, or a particular feature such as built-in animation or an advanced grid system?
+
+A: Bootstrap is open source and hugely popular, so it's often chosen because it's considered the standard. Because of its popularity, there is no shortage of tutorials, plugins, etc., which tends to be the main reason why it's chosen. Foundation is professional, not only aesthetically, but also in terms of their support, consultation, etc., and is maintained by the respected company ZURB. It's good for websites, emails, and even apps. Material Design is the brain-child of Google, and unlike other front-end frameworks, it doesn't rely on JS frameworks. It is meant to be immediately accessible, and usable even in older browsers.
+
+
+> Why would you use a CSS framework?
+
+A: CSS frameworks save development time, create consistency on web pages, and enforce guidelines on how things should be styled. 

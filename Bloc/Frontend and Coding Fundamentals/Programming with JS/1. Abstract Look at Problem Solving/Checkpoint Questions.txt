@@ -1,0 +1,22 @@
+Abstract Look Checkpoint Questions
+
+
+# Exercises
+
+> Practice breaking it down! Choose one of the following to explain as if the listener has never done it before:
+
+
+A: As a former barista, I can explain how to make a perfect cup of coffee, "pour over" style. 
+	Firstly, to brew it properly we need the following items: 1. a kettle (capable of being heated, has a precision spout for pouring, and preferably made of stainless steel), 2. atleast 500 ml of purified water, 3. a heating mechanism (a hotplate or stove top will do), 4. your favorite coffee mug, 5. a "pour over station" (should have a funnel on top, and underneath that funnel, a space to put a coffee mug), 6. a digital scale, 7. a measuring cup or small bowl/cup, 8. a coffee filter (preferably the unbleached, tan-colored kind, and should fit snugly into the pour over station funnel), and finally 9. your favorite coffee (preground to a medium grind), 10. a stop watch 
+	1. Preparation: Fill kettle with 500ml (or slightly more) of purified water, bring to boiling temperature on stove top or hot plate. Place mug under pour over station, insert filter in funnel, and pour a small amount of the heated water over the filter so that the mug underneath catches runoff water, then discard this water from the mug (this step helps remove the taste of paper out of the coffee). Replace the mug back under the pour over station. 
+	Place the measuring cup (or small small cup/bowl) on the digital scale, press the "tare" button to bring the weight to zero, then pour the preground coffee into the measuring cup until you have 30 grams. Pour the 30 grams of coffee into the paper filter (that is still snuggly nested inside the funnel), and try to smooth the surface of the coffee out so that it is somewhat flat. 
+	2. The Bloom: Start the timer as you make the first pour. Slowly but steadily pour the heated water in a circular motion around the top of the grinds, so that a circle is made on the top of the grinds, and let that sit for 30-45 seconds. This is called the bloom, and it releases carbon dioxide trapped in the grinds, making a more delicious cup.   
+	3. The Pour: During the bloom process, you should see small bubbles of carbon dioxide coming out of the top of the grinds, and after that has stopped (about 45-60 seconds since the timer started), continue the pour process. Pour in circles that spiral into the center of the grinds, and then back out, pausing occasionally if the filter looks close to overflowing. Continue pouring until most/all of the hot water has been poured. The last of the water should finish filtering through the grinds when the stop watch shows 3-4 minutes total. 
+
+> In our “Say Hi” example, if the Say Hi part of the program never runs, how would you narrow down the cause of the problem? Explain the process and use a roadmap to visualize it.
+
+A: Using the principles taught in this section, I would start with the "Say 'Hi'" portion of the code and make sure that it is working correctly, then check the previous "station" in the assembly line by checking info for the "User Click Button", and so forth until I find where the program does run correctly.
+
+> Create a problem-solving example using a roadmap and the process of elimination for narrowing down issues of your own. You already use this skill daily. Break down and explain a problem you solve in your everyday life.
+ 
+A: Recently, I cleaned my battery terminal in my car, and even though I properly reconnected it, my engine wouldn't idle anymore, and my car wouldn't relearn how to idle like it's supposed to. After spending some time researching, I tried every fix that I could find, trying to use the process of elimination. I knew it was getting power, and all electrical components seemed to also be fuctioning, but in the end, I had to bring it to my mechanic who reset my computer, something I don't have the tools for. Using the process of elimination and roadmaps to try to solve the problem meant that I didn't waste money having my mechanic fix it, as I couldn't have fixed it myself.  

@@ -1,0 +1,111 @@
+Request/Response Cycle
+	You don't need a web browser to make a request, can use code! For ex.: in terminal can type: curl https://young-caverns-13371.herokuapp.com/		If you do that, will receive a small bit of HTML. This is making a request to an external site using bash code. 
+
+
+Common Response Codes
+	When a request is made, usually has headers in both request and the response. These request headers have bits of hidden meta info, and they give both server and requestor important details. Here is a link for error response codes https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+Not worth memorizing them, but worth memorizing some common groups:
+200s: Ok/Success - The request was received and processed by the server successfully.
+300s: Redirect - The request was received and then redirected somewhere else.
+400s: The requestor made a mistake - The most common is "404: Not Found," which indicates that requestor asked for a resource that didn't exist.
+500s: The server made a mistake - The server is down or some code on the server threw an error.
+
+
+
+HTTP Verbs
+	Another part of the request is the HTTP verb that's used. Some common HTTP verbs/their purposes:
+GET: The most common verb. It is what is used to retrieve a page from a server. This is what occurs by default when a you put a URL into the browser or click on a link.
+POST: This is used to create a new object on the server. When you sign up for Hacker News, you submitted a form. That submission created a new user object.
+PATCH: This is used to update an existing object on the server. When you update your password, you fill out a form with your new password and click submit. That submit click triggers an update to your user object.
+PUT: This is used to replace an existing object on the server. It's often used interchangeably with PATCH, but technically it should only be used when sending a complete replacement for an object.
+DELETE: This is used to delete an object from the server.
+
+Example: If the website had an available URL like example.com/users, a GET request to that URL could return a list of all of the site's users, and a POST request to the same URL could create a new user on the site.
+
+
+
+Synchronous vs. Asynchronous
+	When you execute something synchronously, you wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes. (Most code runs synchronously). 
+	When making a call to external site, it runs asynchonously. Calling out to a site often referred to as "AJAX request" (A=asynchronous). Again, asynchronous= the call will happen and the main code will execute WITHOUT waiting for the response.
+	Asynchronous can create race conditions, which are situations where: 
+-Multiple processes are running simultaneously.
+-The time that these processes will take is unknown.
+-The outcome depends on the order in which the processes complete.
+The processes are "racing" eachother. Sometimes this can cause bugs. To prevent bugs, we use JS promises (promises only execute AFTER the response has been returned).
+
+
+
+Promises
+	(There is an image of a flowchart of different routes a promise can take + its matching functions). With promises, the flow for building requests looks like:
+- Send the request
+-Append a `.then` call and insert a function to execute upon successful request
+-Append a `.catch` call and insert a function to execute upon a failed request. 
+
+
+
+CORS
+	"Cross-origin resource sharing" allows resources on one page to be requested from a site outside of domain of original page. If all CORS were allowed, browser could be hijacked by malicious JS. To prevent that, most modern browsers disallow CORS by default. 
+	To work within restrictions, we can use a proxy site. The site, https://cors-anywhere.herokuapp.com/, will precede the actual site we are requesting data from. The server at https://cors-anywhere.herokuapp.com/ will call out to our requested site, grab the data, not change it a bit, and return it back to us as if we had directly hit that site.
+
+
+
+Consuming APIs
+	Template for every JavaScript request in Bloc is:
+
+let url = "https://cors-anywhere.herokuapp.com/https://....../api"
+//the first part of the URL is the CORS proxy
+
+fetch(url)
+	.then
+	// do something on success
+	()
+	.catch
+	// do something on failure
+	();
+
+Fill in the ".catch" part first: 
+.catch(e => {
+	console.log('An error occured: ${e}');
+// this catches the error "e" and logs to the console
+
+Then add the function to execute on success:
+.then(r => {
+	console.log(r);
+})
+
+Copy/pasting to the Chrome dev tools console and running will return a response. This is an example of a successful asynchronous request to an API! Note: This raw response stream of data isn't in a workable format, so need to parse the JSON response body before can use it:
+
+let url = "..."
+
+fetch(url)
+	.then(r => {
+		return r.json();
+	})
+	.then(data => {
+		console.log(data);
+	})
+	.catch.....
+
+
+
+https://css-tricks.com/using-fetch/
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+
+
+
+
+
+
+
+Extra Notes
+-What is an API? Think of it like a waiter taking your order and bring it to the kitchen. If you want to access any web pages/apps outside of your own code, you need an API. Most of the time, using an API is free, which means you can access and use billion dollar infrustructures like facebook in your own app. 
+
+-CORS allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. It defines a way in which a browser and server can interact to determine whether it is safe to allow cross-origin request. Allows more freedom that just same-origin requets, but more secure than allowing all cross-origin requests. The CORS standard describes new HTTP headers which give browsers/servers a way to request remote URLS only when they have permission. 
+
+-Modern browsers use CORS in an API between browsers and servers. Modern browsers use CORS in an API container.
+
+-What is a fetch? It is promised-based. It is a modern way to Ajax without helper libraries like jQuery or Axios
+

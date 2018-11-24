@@ -1,0 +1,26 @@
+11/26/2018
+
+Q: Go over the assessment
+
+A: 
+
+Q: Current state of web dev, ask about how they use React and Angular in work. 
+
+A: 
+
+Q: I keep seeing things like "state of our application", "components that manage their own state", what is "state"? 
+
+A: 
+
+Q: What does "encapsulated" mean (like "encapsulated components")? 
+
+A: 
+
+Q: Virtual DOM
+
+A: 
+
+Q: Uni-directional data flow
+
+A: 
+

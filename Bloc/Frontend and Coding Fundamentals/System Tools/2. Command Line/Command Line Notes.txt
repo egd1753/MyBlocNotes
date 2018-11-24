@@ -1,0 +1,120 @@
+Command Line Notes
+
+the $ sign is called a shell prompt
+
+Directory- Location for storing files on a computer
+Command Line- User interface to computer's OS
+Environment Variables- A dynamic object on a computer that stores a value
+
+
+
+Code Academy command line course
+-command line is like using Finder or Explorer, but fully text bases. Advantages are power: can run programs, write scripts, automate stuff, etc. 
+
+In terminal, will see $. This is called the shell prompt, appears when ready to accept a command.  
+
+Folders are called directories
+
+Files/directories are organized into a filestystem. Filesystem organizes computer's files/directories into a tree structure. The first directory in the filesystem is the root directory. It's the parent of all other directories/files in filesystem. 
+
+
+
+
+
+Common navigation commands: 
+
+ls  ---a command that lists all files/directories inside working directory
+
+clear   -clears screen
+
+pwd -stands for "print working directory". It outputs the name of the current directory, which is called the working directory. Together with "ls", useful to show "you are here".  
+
+cd- change directory. The text equivalent of clicking on an icon. When a file/directory/program is passed into a command, it's called an argument. Therefore: "cd 2015"- cd command takes a directory name (2015) as an argument, and switches into that directory. TO navigate directy to a directory, use cd with directory's path as an argument. 
+
+cd .. - Means "move up one directory". Ex.: jan/memory is our working directory, if we type cd .. it will navigate us up to jan/ Note: to move up more than one directory, can just use ../ for each level up
+
+mkdir - means "make directory". It takes in a directory name as an argument, then creates a new directory in the current working directory.
+
+touch - creates a new file inside the working directory. It takes in a filename as an argument, and then creates an empty file in the current working directory.
+
+ls -a     -(shows hidden files) modifies the ls behavior to also list the files/directories starting with a dot (.) Files started with a dot are hidden/don't appear when using ls. Note: -a is an option. Options modify behavior of commands. ls has other options, including: -l  (lists all contents of a directory in long format), -t  (order files/directories by time they were modified)
+
+
+-l 	option lists info as a table, shows us the filesystem we'll be working with. The first column means access rights (actions permitted on a file/directory), 2nd column is number of hard links (counts the # of child directories/files. Also includes the parent directory link (..) and current directory link (.), 3rd is username of the file's owner (might see something like "EthanDugasuser?"), 4th column is name of group that owns file, 5th is size of file in bytes, 6th column is date/time of last modification, 7th is name of file/directory
+
+ls -t     -option that orders files/directories by time of last mod
+
+Can use these options by themselves with ls, or can group them together, like this: ls -alt (ls -a, ls -l, ls -t). This example would mean list all contents, including hidden files, in long format, ordered by date/time of last mod. 
+
+cp    -command that copies files/directories. The first argument we list is the file we want to copy, the second argument (separated by a space) is the place we want to copy to. We can copy multiple files by listing them (separated by a space), and then typing the directory to place them into. Note: if our working directory is different from the directories where the files are before being copied, we need to specify atleast the relative location of these files. Ex.: cp biopic/ray.txt biopic/notorious.txt historical/     the "biopic/" part tells us the directory where notorious.text and ray.text can be found. 
+
+* selects groups of files. Special characters like this are called wildcards. The * selects all files in the working directory. If we typed:   m*.txt   this would mean: select all files in the working directory starting with "m" and ending with ".txt"
+
+mv  -command for moving files/directories. Functions similarly to cp: list source files in the first argument(s) and destination directory (or file) as the last argument. Can also use mv to rename a file: 1st argument is the old file name, and the destination will be the new file name (we have to have created this new file name/document already?), we basically just merge the old file with the new file, changing only the name of the documents.
+
+rm   -command for deleting files and directories. An option for rm is   -r   , which stands for "recursive", it's used to delete a directory and all of its child directories. Careful when using rm, it deletes files/directories permanently! There's no undelete command, so once you delete a file or directory with rm, it's gone.  
+
+Recap: so far we've covered common stuff for viewing and altering filesystem. Quick recap of stuff covered: 
+Options modify the behavior of commands:
+ls -a lists all contents of a directory, including hidden files and directories
+ls -l lists all contents in long format
+ls -t orders files and directories by the time they were last modified
+Multiple options can be used together, like ls -alt
+From the command line, you can also copy, move, and remove files and directories:
+cp copies files
+mv moves and renames files
+rm removes files
+rm -r removes directories
+Wildcards are useful for selecting groups of files and directories
+--------------------------------------------------------
+
+
+Redirection
+
+
+Can direct input/output of a command to and from other files/programs, and chain commands together in a pipeline
+
+echo "Hello"    -The echo command accepts the string "Hello" as standard input, and echoes the string "Hello" back to the terminal as standard output.
+
+standard input, abbreviated as stdin, is information inputted into the terminal through the keyboard or input device.
+
+standard output, abbreviated as stdout, is the information outputted after a process is run.
+
+standard error, abbreviated as stderr, is an error message outputted by a failed process.
+
+Redirection reroutes standard input, standard output, and standard error to or from a different location.
+
+How does redirection work?     $ echo "Hello" > hello.txt       The > command redirects the standard output to a file. Here, "Hello" is entered as the standard input. The standard output "Hello" is redirected by > to the file hello.txt.      $ cat hello.txt     The cat command outputs the contents of a file to the terminal. When you type cat hello.txt, the contents of hello.txt are displayed. (Basically, it's how we copy info from one file to another, problem is it will override the info already in the destination file.) 
+
+>>    takes the standard output of the command on the left and appends (adds) it to the file on the right. Ex.:   $ cat glaciers.txt >> rivers.txt    Takes the content of glaciers.txt and appends ( "adds") this content to the output data of rivers.txt (If we want to move data from one source to a destination, but we don't want to override the info already in the destination, we don't use >  , instead we use >>) 
+
+$ cat < lakes.txt   < takes the standard input from the file on the right and inputs it into the program on the left. Here, lakes.txt is the standard input for the cat command. The standard output appears in the terminal.
+
+|     This is a "pipe", takes the standard output of the command on the left, and pipes it as standard input to the command on the right. Can think of it as a "command to command" redirection. Ex.:    $ cat volcanoes.txt | wc     The output of cat volcanoes.txt is the standard input of wc. In turn, the wc command outputs the number of lines, words, characters in volcanoes.txt respectively. Ex.:     $ cat volcanoes.txt | wc | cat > islands.txt
+      Multiple |s can be chained together. Here the standard output of cat volcanoes.txt is "piped" to the wc command. The standard output of wc is then "piped" to cat. Finally, the standard output of cat is redirected to islands.txt.
+
+sort    -takes standard input and orders it alphabetically for the standard output. Ex.:    $ cat lakes.txt | sort > sorted-lakes.txt    Here, the command takes the standard output from cat lakes.txt and "pipes" it to sort. The standard output of sort is redirected to sorted-lakes.txt.
+
+uniq	-stands for "unique", filters out adjacent, duplicate lines in a file.
+
+grep	-"global regular expression print", searches files for lines that match a pattern and returns the results. (also case sensative). grep -R ("recursive") searches all files in a directory, outputs filenames/lines containing matched results.
+
+sed	-stream editor, accepts standard output, modifies it based on an expression, before displaying it as output data. Similar to "find and replace"
+
+Expressions: 
+s	stands for "substitution", always used with sed for substitution.
+snow	the search string, the text to find
+rain	the replacement string, the text to add in
+
+------------------------------------------------------------
+
+
+
+Environment
+
+(bunch of crap on using the nano text editor, can use "alias" to create keyboard shortcuts for common commands. 
+
+Also other stuff after..
+
+
+

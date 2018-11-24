@@ -1,0 +1,11 @@
+# Questions
+
+> List the three different ways to create layouts for a site.
+
+A: The box model (most common), the flexbox model (becoming more popular), and the grid model (bleeding edge).
+
+> List the steps one could use to alter a website's CSS in the Chrome Developer Tools
+
+A: We would find our webpage documents on our computer, right click on it, click `Open with`, and select `Google Chrome`. Then we right click on our loaded page and click `Inspect`. The top right box lets us add/remove CSS and see the updates live.
+
+# Code Practice

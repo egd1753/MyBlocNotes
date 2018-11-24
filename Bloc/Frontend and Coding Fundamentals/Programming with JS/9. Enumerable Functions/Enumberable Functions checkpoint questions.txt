@@ -1,0 +1,28 @@
+# Questions
+
+> Describe the `map()` function.
+ 
+A: This function iterates over an arrray and creates a new array by transforming each item. 
+
+> Describe the `filter()` function.
+
+A: This function also iterates over the items in an array, but it keeps items with the condition is evaluated as `true`. 
+
+> What is the difference between the `map()` and `filter()` functions?
+
+A: `map()` is good for when we want to do something to every item in an array create a new array (without mutating the original), and `filter()` is more of a boolean-style function that returns items when the condition is `true` (the function "filters" out the items that we don't want as specified in our condition). 
+
+# Code Practice
+
+```javascript
+
+var numbers = [1,2,3,4,5,6,7,8,9,2,3,4,5,6,1,2,3,4,5,6,7,8,8,4,3,2];
+
+var total = numbers
+.filter(item => item > 3)
+.reduce((total, item) => total + item);
+
+console.log(total);
+96
+
+```

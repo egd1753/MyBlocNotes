@@ -1,0 +1,56 @@
+React.js or simply React https://reactjs.org/ is a popular JS library developed by Facebook to enhance creation of interactive/stateful/reusable user interface components. Some popular applications written in it are New York Times, Airbnb, Instagram.
+
+Powerful techs like Chrome V8 https://developers.google.com/v8/ and Node.js https://nodejs.org/en/ enable seamless dev from back-to-frontend of performant JS-driven applications that live on the browser. Node.js's package ecosystem, npm https://www.npmjs.com/, is largest ecosystem of open source libraries in the world. 
+
+Progressive web apps (PWAs) https://developers.google.com/web/progressive-web-apps/ speed up dev time. They are web-based apps that load fast even on flaky networks, send push notifications, deliver rich user experience that resemble native apps (examples of PWA:   https://pwa.rocks/). There are powerful tools and techs ( https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-i-introduction-50679aef2b12 )  that enable widespread adoption of PWAs, such as leading Ionic Framework https://ionicframework.com/
+
+React and Angular are great for single-page applications ( https://en.wikipedia.org/wiki/Single-page_application ), web apps that don't require page loads when navigating between pages as most sites require. 
+
+
+Library vs. Framework
+	A library plugs into your code, your code plugs into a framework. A framework like Bootsrap or Angular, provides basic structure of an app. It's like the skeleton of a project, reduces need for hard coding. Framework is also "in charge", by dictating the way we structure/dev our code. 
+	Libary like JQuery or React, is collection of prewritten code consisting of common tasks that simplify development. Our code is "in charge" and uses a library to retrive specific functions from the collection. 
+
+
+MVC (Model-View-Controller) Architectural Pattern
+	Arch patterns are reusable solutions to common probs. MVC is a popular design for implementing UI. MVC provides a way to reason about our code/structure our app. Used not only in Angular apps, but also frameworks like Rails, Django, and more. 
+	MVC provides a separation of concerns between data and view layers, bound together by the controller. Model=data of an app, View=ouput representation of that data (or the UI). User interacts with Controller, based on user input, the Controller conducts transactions on behalf of Model. Controller manipulates Model and passes the Model to the View. The View renders the Model into an appropriate output format.
+
+  
+React's Advantages 
+	At time of React's release, MVC and 2-way data binding were taking frontend world by storm, with Angular, Backbone, Knockout. Traditional MVCs have advantages of easier code maintenance/reusability, however Angular falls short (due to 2-way data binding nature) when compared to React regarding performance cause of Angular's dirty checking and $digest cycles.
+	React brought about component-based and unidirectional architectures for managing app state, including tools in React ecosystem like Flux, Redux, and RxJS. Compared to traditional MVC, this provides devs with better ways to manage separation of concerns, and cleaner ways to handle event-handling and business logic. (Same evolution toward unidirectional architecture is now happening in Angular, with ngrx/store to manage app state)
+
+React vs. Angular
+https://medium.com/javascript-scene/angular-2-vs-react-the-ultimate-dance-off-60e7dfbc379c
+https://www.sitepoint.com/react-vs-angular/
+
+More about progressive web apps
+https://ionicframework.com/
+https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/
+
+
+
+
+
+
+
+
+Extra Info:
+-React is a library (like JQuery) and Angular is a framework (like Bootstrap)
+
+-React doesn't include all the other crap as Angular, cause React was designed specifically for building UIs
+
+-Angular is complete framework for either web or mobile. It's built on TypeScript (superset of JS) which can be great or terrible for different people. TypeScript compiles down into standard JS. Basically it gives us features of the future to use today, and optimizes code for browser. Once new standards are defined, browsers still have to catch up/implement those features, so TypeScript lets us use these features and then worries about spitting out code that browser will understand (read more on benefits of TypeScript). Can use Angular without TypeScript but not used as widely. React can use TypeScript too, but Angular is really tailored for it. Prolly biggest advantage of Angular is that everything is there to use, which also provides consistency across other Angular apps (including how to structure project). Angular moves the job of filling page templates with data from the server to the client, making a system that's better structured for dynamic page updates. Other core features are: data binding, expressions, interpolation, directives, views/routes, filters, HTML compiler, forms. 
+ 	Biggest cons is that Angular is indeed a box you operate in, so difficult to import other libraries and such. Who uses Angular? NBA, Sears, NFL, go to https://www.madewithangular.com/ to see full list. 
+
+
+-React takes a different approach, cause it's just one piece of the puzzle. It's really only focusing on the "view" layer in the state object. Can also make mobile apps with it. Big selling points are it's use of Virtual DOM and the emphasis on application state. 
+	DOM: view representation of all our code, takes our HTML and JS to create what we see on actual page. Problem with the DOM is it wasn't built for dynamic web apps/pages, was built for static content/plain text living on a page. These days we are pushing the DOM past what it was designed to do. React went about solving the problem by abstracting away from this environment.
+	Virtual DOM: with React you work with an object representation of the DOM. It works with two snapshots: one original and one of updated changes. It then compares the difference and updates only that small piece of code that actually needs to be changed rather than rewriting the whole HTML doc. This causes huge performance boost, cause not really forcing the browser to repaint itself every time there's a change. 
+	Application state: object that determines how code/component renders/behaves. Can think of state as a single source of truth for all React components. Rather than keeping values/variables littered throuhout the component/application, they're maintained in a single object that can only be updated through a special method of said state. Similar to a private class w/ properties that get updated with a public method. You still use variables in React, but State is an object used for anything that's dynamic (like our data) or boolean values (like to show/hide a loading spinner). This makes it easy to debug an app, can always find a specific state to try to reproduce a bug/some feature. 
+	We need to fill in the missing pieces, and fortunately there are tons of React libraries like Rack router and JSX. Downside is there are a lot of tools available, some possibly redundant, so your team has to decide on which tools to use. 
+
+
+-Before SPAs: before SPA frameworks, landscape was dominated by multiple page apps (MPA) that were built in static HTML and server-side techs like PHP, ASP, Java, Ruby, and Python. A lot of what we think of as "normal" websites even today are still MPA. 
+	MPAs work by making multiple requests between client and server. More info https://www.scalablepath.com/blog/single-page-applications/

@@ -1,0 +1,4 @@
+Console.log is an extremely useful tool a a dev's toolkit. Common places to insert logs are before a task begins and after it ends, which allows us to see stuff more clearly. Console.log can be invaluable during dev phase of a project. 
+
+Stack trace: they go backwards, the most recent thing happened at the top, and the very first thing happened on the bottom (in reference to errors/console.logs for buggy programs)
+

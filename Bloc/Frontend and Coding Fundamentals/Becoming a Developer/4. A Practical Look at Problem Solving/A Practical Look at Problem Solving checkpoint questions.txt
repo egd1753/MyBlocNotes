@@ -1,0 +1,12 @@
+# Exercises
+
+> Based on this output, how would you figure out what the problem is? Identify the line(s) that are broken.
+
+A: The roadmap for this code is the same as previous examples, and if we look at the stack trace, we can see that the last log said that the product was packaged for Next Day. Therefore, we can conclude that the packaged product was never loaded unto the truck, so we will look at that code for a problem. The broken code lies in the variable called "order" in the line: "product.loadOnTruck;". We are trying to call the "loadOnTruck" function, but since we forgot the `()`, it thinks we are trying to access a property instead of the function. 
+
+> Narrow it down! What line(s) are broken? Submit the answer.
+
+A: In the "order" variable, the third to last line of code says "product.package();" this code doesn't include the parameter of "shippingType". It needs to be refactored so that "shippingType" is included. 
+
+
+

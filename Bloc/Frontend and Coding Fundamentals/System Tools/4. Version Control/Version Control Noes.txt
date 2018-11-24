@@ -1,0 +1,48 @@
+Version Control Notes
+
+
+Issues: the command "open breakfast.txt" doesn't work
+
+
+
+When we use "$ git init", we create an empty git repo in whatever our working directory is. This is actually a hidden folder called ".git", and inside this folder is where the magic happens. Within this hidden .git folder is where it stores references and commits for the repository in it. Ex.: we create a folder called "bloc", then inside of that create a folder called "learning_git", and we initialize a Git repo in "learning_git", which creates a hidden ".git" folder; which is where it will keep track of changes to "learning_git". 
+	Git has several states that files move through:
+Committed: 
+	Git knows file exists, it's added it to a commit
+Modified: 
+	Git knows file exists and is part of a commit. However, also recognizes file has been modified since last commit. 
+Staged:
+	Git is tracking file, will add it to the next commit.
+
+Ex.: We create "breakfast.txt", then run "git status". It will list untracked files (new files that have been created but not part of any commits yet). For Git to track it, you need to tell it by using "git add". We can also use "git add --all" to add all modified and untracked files to staging area. Can use * operator as a wildcard to add files with a given extension to the staging area. Ex.: "git add '*.txt'" would add all untracked or modified files with ".txt" extension to the staging area. Staging area= place were all changes are held before they're committed. 
+	Running "git status" tells us "breakfast.txt" is in staging area, waiting to be committed. We do this using "git commit", and also use message flag "-m" with a string containing descriptive message. Ex.: $ git commit -m "Create most important meal of the day."
+	After a successful commit, can use "git log" to get an overview of what the commit did, along with all previous logs for that repo."git status will return message saying everything has been committed.
+
+
+
+
+Branches
+One of the greatest features of Git, allows us to work on a feature, while giving us a chance to keep/discard that work later on. If we want to modify "breakfast.txt", we can use "git branch" and give it a branch name. Ex.: $ git branch better-breakfast
+	To see list of branches that are active, run "git branch". A * signals which branch we are on currently. Can also use "git checkout -b <branch name> to create and then move to that branch. 
+	When merging, Git can do a "Fast-forward", meaning there weren't any conflicts, Git was able to merge changes into master. 
+	After finishing with a branch, use "git branch -d <nameofbranch> " to delete it
+
+
+
+
+
+GitHub
+	Before we can push info from local repo to GH, need to authenticate our machine. Can do that using HTTPS or SSH keys. SSH is a kind of protocol, can use it to connect/authenticate to remote servers/services. You can connect to GH without giving username/password every time.  
+	The first time we push our commits to GH, we need to use "git push" and also the "-u" flag (says that we want to track changes). 
+	Create new repo on GH, select repo name, give description, public/private (paid), etc. 
+
+
+
+Collaborating on GH
+A standard workflow would be as follows:
+-An engineer grabs a task from a list of things that needs work.
+-They create a branch and begin work on the task.
+-After they complete the task, they create a Pull Request (PR).
+-The project maintainer (or other engineers) review the PR.
+-If the PR is approved, the PR is then "landed" (merged) into master on GitHub.
+-The engineer then pulls down the master branch to make sure his/her copy of the repository has the latest changes.

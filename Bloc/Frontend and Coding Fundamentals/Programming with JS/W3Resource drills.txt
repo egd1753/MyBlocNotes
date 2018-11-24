@@ -1,0 +1,30 @@
+Basic Exercises
+
+4. 
+function areaTriangle (a, b, c) {
+    s = (a + b + c)/2
+    area= Math.sqrt((s-a) * (s-b) * (s-c) * s);
+    return area;
+}
+
+10. (Looked over)
+
+11. 
+function convertCelToF(tempCel) {
+    tempFar = (9 * tempCel/5) + 32;
+    return tempFar;
+}
+
+function convertFarToC(tempFar) {
+    tempCel = (tempFar - 32) / 9 * 5;
+    return tempCel;
+}
+
+18.
+function coolFifty(a, b) {
+    if((a === 50) || (b === 50)) {
+        console.log("true");
+    } else if((a + b) === 50) {
+        console.log("true");
+    } else console.log("false");
+}

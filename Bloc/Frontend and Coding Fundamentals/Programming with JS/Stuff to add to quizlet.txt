@@ -1,0 +1,106 @@
+ 
+"new" keyword
+Can use it to create an array constructor. 
+
+"static" keyword/function within a class
+
+what is object-oriented programming
+
+syntactical sugar: syntax that is easier to read or express. It makes the language "sweeter" for human use.
+
+what do we mean when we "wind/unwind up the callstack"?
+
+JS date objects/methods
+
+What does "cached" mean
+
+What does "parsing" mean: breaking a sentence, block of code, etc. down into its components to analyze it/describe their syntactic roles
+
+.innerHTML property defines the HTML content
+
+document.write()
+
+window.alert()
+window.print()
+
+JS statements are composed of: values, operators, expressions, keywords, comments
+
+JS ignores white spaces (cause it compiles it and erases any spaces?)
+
+keywords are reserved words
+
+2 kinds of values: fixed (literals) and variables. 
+
+JS uses the Unicode character set. Unicode covers almost all characters, punctuations, and symbols in the world.
+
+Can use the one line commenter denoter "//" to "comment out" code for testing purposes 
+
+It's best to declare relevant variables at the beginning of a script 
+
+If you add a number and a string, it evaluates to a string
+
+What is a fetch request? It is promised-based. It is a modern way to Ajax without helper libraries like jQuery or Axios
+
+What is interpolation?
+
+operator precedence: if we have: var x = 100 + 50 * 3; we perform the multiplication first, just as in normal math. Multiplication and division have higher precedence than addition/subtraction, but this can be changed by using parentheses: var x = (100 + 50) * 3; operation inside () is computed first (they are fully computed). When many operations have the same precedence (ex. addition and subtraction), they're computed from left to right. 
+
+Assignment operators: +=, -=, *=, /=, and %=
+
+JS has only one type of numbers, they can be written with/without decimal point. Extra large/small numbers can be written with e (scientific) notation
+
+variable w/ no value is undefined. The data type is also "undefined". Can empty any variable by reassigning the value to undefined
+
+-Empty value, like an empty string, has both a legal value and a type
+
+-Null is "nothing", it's something that doesn't exist. Oddly, in JS, data type of null is an object, and not "null", kind of a weird bug. Can empty an object by setting it to null, or undefined
+
+-Difference b/w null/undefined: equal in value, but different in type... null == undefined is true, but null === undefined is false.
+
+typeof can return primitive data types of: string, number, boolean, undefined. Can return 2 complex types: function, object (returns objects for objects, arrays, and null).
+
+A JS function is same as "procedure" or "subroutine" 
+
+Things that can call a function: when an event occurs, when called in code, automatically (self-invoked).
+
+Console.log is an extremely useful tool a a dev's toolkit. Common places to insert logs are before a task begins and after it ends, which allows us to see stuff more clearly. Console.log can be invaluable during dev phase of a project.
+
+"do" keyword 
+
+A declaration is a type of programming statement that tells the compiler that we are creating a variable or object (declaration can also be known as instantiation?)
+
+What does enumerable mean in JS?
+
+What does iterable mean in JS?
+
+Objects, variables, etc.:
+	In java-script , every variable , every class you define when instantiated is an instance of the class Object itself. So, in nutshell , a variable is child of class object just like an object of user-defined class. A variable represents a storage location in memory. It represents the value contained in it. You can assign any new value to variable. An object is a real entity which has properties and methods. A variable may contain the reference to an Object.
+
+What does "parse" mean
+
+If I am creating a function that expects an array as an argument, can I not write "function functionName([paramArray]) {}"?
+
+Jacob Questions:
+-How far behind am I now? How many checkpoints per week would I need to do this week and next to try to catch up by then?
+A: 5-6 checkpoints/week
+
+-Test is at 2, what should I practice coding/problem solving till then? Most important thing to study..?
+A: 
+
+-Does the assessment try to cover material from the chapters, or could it be extra material not mentioned?
+A: 
+
+-If I am creating a function that expects an array as an argument, can I not write "function functionName([paramArray]) {}"?
+A: Yes, exactly. Some languages do that, but JS cause it's loosely typed doesn't matter 
+
+-What does enumerable mean in JS?  -What does iterable mean in JS?
+A: They are kind of interchangeable. Enumerable functions are iterating over a list. The things that's being iterated on is enumerable
+
+-what do we mean when we "wind/unwind up the callstack"?
+A: 
+
+
+
+KNOW: arrays, loops, conditionals, functions, basic objects
+
+

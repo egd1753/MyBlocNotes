@@ -1,0 +1,71 @@
+Additional Ways of Querying DOM
+	From previous lesson, learned 3 methods of querying DOM. Here's a review: 
+	getElementById()
+		returns reference to a single element with given id if found, if not found, "null".
+	getElementsByClassName()
+		returns array-like object of elements with given class name, can provide multiple arguments if separated by spaces (note: argument(s) must be class names only).
+	getElementByTagName()
+		returns array-like object of matching elements, can only pass a single tag name (argument).
+
+
+
+querySelector() and querySelectorAll()
+	Both allow multiple selectors to be passed for the query. Main dif is: querySelector() returns a ref to FIRST element it finds that matches the query, querySelectorAll() returns an array-like object of all matches. Where these methods really shine is when querying by multiple tag names and/or  class names. Ex.:
+document.querySelector('p, .left, .red');	This query returns first "p" element with the class of "left" (maybe left-aligned items) AND the class of "red" (maybe red text). If we have multiple such items, can use querySelectorAll(). 
+	"getElement(s)By" methods are often faster in browser and preferred, but if need more flexibility, can have querySelectors in toolbox as well. 
+
+
+
+Function Expressions
+	Recap: function declarations look like:  function foo() {}	To convert to function expression, we assign function as anonymous function to a variable with same name:   var foo = function() {}
+To convert to arrow function, remove "function" keyword and insert an arrow (aka... =>) in between () and {}
+
+
+
+
+
+
+Events/Event Handlers
+	These are functions that "handle" what happens to event when triggered, events like "click", "change", "submit", etc. Event handlers consist of "on" + name of event. An event is the computer's way of sticking up its hand to say "Hey, this thing just happened!"
+
+Here's example of "click" event:
+
+<button id='show-more'>Show more</button>
+
+Can select this button within JS and apply "onclick" event handler:
+
+document.getElementById('show-more').onclick = () => {}
+
+We can break this into several steps. First, we can save "button" reference into a variable:
+const btn = document.getElementById('show-more');
+
+Then we apply event handler to it:
+btn.onclick = () => {}
+
+Depending on how complex code is, can save function into a variable, then pass it to event handler:
+const showMore = () => {}; btn.onclick = showMore;
+
+
+
+Even Listeners
+	Another way of achieving same functionality is event listener, which is: a function which takes two parameters: the event type and a function. For previous example would look like:
+const btn = document.getElementById('show-more');
+btn.addEventListener('click', () => {});
+
+Also, we can abstract it just as we did for event handler:
+const showMore = () => {}; 
+btn.addEventListener('click', showMore);
+
+
+
+Extra Notes
+-Events are just the computer's way of saying "Hey, this just happened!"
+
+-Events basically just give a webpage more interactivity. We can "listen" for events to happen, like when a user moves their mouse, clicks on a button, etc., and then respond to that event.
+
+-We don't need to begin every DOM thing with "document." instead of querying the DOM like:    document.getElementById();	we could be more specific, like this: variableName.getElementsByTagName()[];  where within the () we put the name of the HTML tag we want to grab, and could put our index number in the [] to select the first, second, third, etc. property for that object (like selecting an array), and the "variableName" part is the parent element that we assigned to a variable. 
+
+
+
+
+

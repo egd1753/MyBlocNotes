@@ -1,0 +1,40 @@
+# Exercises
+
+> Out of the sorting algorithms introduced, or any others you have encountered, which is the quickest or most efficient in sorting a set of data and why?
+
+A: It seems to me, based on my very limited understanding of algorithms, that this answer can vary widely. How fast an algorithm is can depend on the data being sorted, the hardware on a computer, how the algorithm is implemented, etc. Additionally, an algorithm might be quick for certain kinds of data sets, but inefficient in its RAM consumption. However, generally QuickSort is one of the fastest, because it's "in-place", meaning it doesn't use extra storage space to perform sorting. Also, operations in the innermost loop are simpler than other sorting methods.  
+
+> Why is Binary Search more efficient than Linear Search for most cases?
+
+A: In a Linear Search, we potentially have to look through an entire array to find the target (if the target is the last item for example), which can be a slower/inefficient way to search. A Binary Search, however, allows us to "divide and conquer" by splitting an array in half, and ignore the half that is greater/smaller than our target. The catch is that the array has to already be sorted for a Binary Search to work. 
+
+> Code an implementation of Bubble Sort and test it on an integer array of your choice.
+
+A: 
+```javascript
+
+function bubbleSortAlgo(a) {
+	var swapp;
+	var n = a.length - 1;
+	var x = a;
+	do {
+		swapp = false;
+		for (let i = 0; i < n; i++) {
+			if (x[i] < x[i + 1]) {
+				let temp = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = temp;
+				swapp = true;
+            }
+        }
+		n--;
+    } while (swapp);
+	return x;
+}
+undefined
+bubbleSortAlgo([1, 5, 2, 30, 15, 14, 3]);
+
+
+(7) [30, 15, 14, 5, 3, 2, 1]
+
+```

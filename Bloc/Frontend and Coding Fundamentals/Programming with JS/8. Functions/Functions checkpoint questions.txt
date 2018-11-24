@@ -1,0 +1,40 @@
+# Questions
+
+> Describe/define DRY and why functions exist.
+
+A: DRY is a principle in programming, and stands for "don't repeat yourself". In essence, it states that every piece of knowledge needs to have a single representation within a system. Functions exist to aid in the process of organzing knowledge and data, and they do so in a concise way. 
+
+> Describe/define the difference between creating a function and calling/executing a function.
+
+A: We can create a function in three different ways (declaration, expression, or the function arrow). When we create a function, we are basically condensing down a potentially large amount of code into a handful of characters that we can later reference. 
+	When we call or execute a function, we simply type the name of the function that we created, and the code contained within the function will run without us having to retype the entire code block. 
+
+> Describe/define what arguments/parameters are and how they relate to functions.
+
+A: Parameters are essentially variables that are local to a particular function, and are found within `()` and define how a function is executed. Arguments are the initial values that are set for the parameters when/where we first call the function.  
+
+> Describe/define mutating vs. non-mutating functions.
+
+A: Mutating functions: directly alter an existing object/data structure, such as using the `.push()` method of an array to add an extra element on to the end of an array. Non-mutating functions produce a whole new object/data structure.
+
+# Code Practice
+
+```javascript
+
+var shoppingCart = [20, 15];
+
+function getTotalCost(prices){
+  let total = 0;
+  // code below
+  for (let i = 0; i < prices.length; i++) {
+total = total + prices[i]
+  
+};
+  // code above
+  return total;
+}
+
+getTotalCost(shoppingCart);
+35
+
+```

@@ -1,0 +1,29 @@
+for(var i = 0; i < 10; i++){
+    if(i % 2 === 0){
+      console.log("Hello");
+    } else if(i % 3 === 0) {
+      console.log("World");
+    } else if(i % 2 === 0 && i % 3 === 0) {
+      console.log("Hello World");
+    } else {
+      console.log(i);
+    }
+  }
+Q: Using the code above, how many times will the exact phrase "Hello World" be printed to the console?
+A: 0 times
+My answer: i guessed
+
+
+
+var x = 'outside';
+function logToConsole() {
+  console.log(x);
+  var x = 'inside';
+}
+logToConsole();
+Q: What will the code above output?
+A: undefined
+My answer: null
+
+
+(synchronous) Prolly best to put local variables at the top of a function

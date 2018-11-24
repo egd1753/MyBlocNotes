@@ -1,0 +1,17 @@
+# Exercises
+
+> In your own words, explain single-page applications and progressive web apps.
+
+A: A single-page application is designed so that a particular webpage is only loaded once, and the page dynamically changes as a user interacts with it. This helps create a better user experience by preventing the webpage from reloading every time new data is received. For developers, single-page applications can be beneficial because a chunk of the rendering work is done on the client side instead of the server side, 
+	A PWA is designed to be reliable and load very quickly, for scrolling to be silky smooth and quick, and to allow things like push notifications and feel like a native app. 
+
+> Either from your research or by inspecting popular sites you frequent (using the Chrome DevTools), give some real-world examples of applications built with React and Angular.
+
+A: React has been used to built sites like Facebook, Netflix, The New York Times, AirBnB, WhatsApp, and Instagram. Angular has been used to build sites like CVS Shop, Travel.gov, Google Pay, and ABC News.
+
+> Write a summary of the benefits of React vs. Angular. Then ask your mentor about the current state of web development, and ask questions about how they use these two popular technologies in their work.
+
+A: Benefits of Angular: It comes from a good family (Google), and is a complete framework having pretty much everything you need out of the box. Although React can also use TypeScript, Angular heavily favors TypeScript, a language with many developers feel has huge advantages. Because Angular contains about everything you would need, it provides consistency across other Angular apps that you might need to, or already have built. Some of the main features are: 2-way data binding, expressions, interpolation, directives, views/routes, filters, HTML compiling, and forms.   
+
+Benefits of React: It comes from a good family (Facebook), and for the most part is easier to learn than Angular. Because Angular already contains basically everything that you need to build a web page or application, it can be difficult to customize, so React takes a different approach by mostly focusing on the "view" layer in the state object. This emphasis on the application state, and the use of a Virtual DOM are the big benefits of React. It also introduced component-based and unidirectional data flows to help manage states, and as a result, React can make it easier to debug applications. 
+
